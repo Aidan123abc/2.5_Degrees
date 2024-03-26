@@ -7,6 +7,7 @@ public class GameTimer : MonoBehaviour {
     public int timer = 0;
     private float theTimer = 0f;
     public GameObject timerText;
+    public int temperature = 100;
 
     void FixedUpdate(){
         theTimer += 0.01f;
@@ -22,3 +23,5 @@ public class GameTimer : MonoBehaviour {
         timeTextTemp.text = "" + timer;
     }
 }
+
+
