@@ -6,16 +6,34 @@ public class PlayerMove : MonoBehaviour {
 
 	private bool FaceRight = true;  // determine which way player is facing.
 	public float runSpeed = 10f;
+	private Animator animator;
 
-	void Update () {
-		//Horizontal axis: [a]/left arrow is -1, [d]/right arrow is 1
-		Vector3 hMove = new Vector3(Input.GetAxis ("Horizontal"), 0.0f, 0.0f );
-		transform.position = transform.position + hMove * runSpeed * Time.deltaTime;
-
-		// if input is moving player right and player faces left, turn, and vice-versa
-		if ((hMove.x < 0 && !FaceRight) || (hMove.x > 0 && FaceRight)){
-			Turn();
+	void Start()
+	{
+	// Get the Animator component
+	animator = GetComponentInChildren<Animator>();
+		if (animator == null) {
+			Debug.LogError("Animator not found!");
 		}
+	}
+
+	void Update ()
+	{
+	Vector3 hMove = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0.0f);
+	transform.position += hMove * runSpeed * Time.deltaTime;
+
+	// Update the Animator's Speed parameter
+	//animator.SetFloat("Speed", runSpeed * Mathf.Abs(hMove.x));
+	if (hMove.x != 0){
+	animator.SetBool("Walk", true);
+	} else {
+		animator.SetBool("Walk", false);
+	}
+
+	if ((hMove.x < 0 && !FaceRight) || (hMove.x > 0 && FaceRight))
+	{
+		Turn();
+	}
 	}
 
 	private void Turn()

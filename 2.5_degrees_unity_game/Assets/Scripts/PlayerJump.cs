@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerJump : MonoBehaviour {
 
       //public Animator anim;
-      public Rigidbody2D rb;
+      private Rigidbody2D rb;
       public float jumpForce = 20f;
       public Transform feet;
       public LayerMask groundLayer;
