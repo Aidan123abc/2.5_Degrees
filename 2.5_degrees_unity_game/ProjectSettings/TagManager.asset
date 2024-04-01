@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - PauseMenuSlider
+  - Enemy
   layers:
   - Default
   - TransparentFX
