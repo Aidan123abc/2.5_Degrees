@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1501392545791304339}
   - component: {fileID: 4958553976879994130}
   - component: {fileID: 193016139360378133}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: enemyArt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 7707984525960439023}
   - component: {fileID: 2741849757063241529}
   - component: {fileID: 436973769610535373}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy_movehit
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
