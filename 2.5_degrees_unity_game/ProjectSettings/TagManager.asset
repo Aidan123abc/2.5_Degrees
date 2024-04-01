@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PauseMenuSlider
   - Enemy
+  - GameHandler
   layers:
   - Default
   - TransparentFX
