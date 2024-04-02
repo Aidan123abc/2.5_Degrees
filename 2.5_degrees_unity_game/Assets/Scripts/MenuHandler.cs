@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class MenuHandler : MonoBehaviour {
 
       public void StartGame() {
-            SceneManager.LoadScene("Winter_Level");
+            SceneManager.LoadScene("City");
       }
 
       public void QuitGame() {
