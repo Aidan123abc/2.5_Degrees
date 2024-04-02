@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class happySlider : MonoBehaviour
+public class tempSlider : MonoBehaviour
 {
 
     public Slider slider;
@@ -17,7 +17,7 @@ public class happySlider : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        IncrementProgress(0.60f);
+        IncrementProgress(0.99f);
     }
 
     // Update is called once per frame
