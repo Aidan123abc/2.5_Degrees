@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865e378c18bd44534bce30a83fa1b59f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 10
+  runSpeed: 5
 --- !u!114 &2897008117024663527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4b56683bc1f44c2697fbd69130663d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 5
+  jumpForce: 4
   feet: {fileID: 975294092925929988}
   groundLayer:
     serializedVersion: 2

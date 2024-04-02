@@ -28,6 +28,8 @@ public bool isDefending = false;
                   playerHealth = StartPlayerHealth;
             //}
             updateStatsDisplay();
+            Text tokensTextTemp = acornsText.GetComponent<Text>();
+            tokensTextTemp.text = "ACORNS: " + acorns;
       }
 
       public void playerGetTokens(int newTokens){
@@ -58,6 +60,13 @@ public bool isDefending = false;
             }
       } 
 
+      public void playerPickUp(int amount) {
+            acorns = acorns + amount;
+
+            Text tokensTextTemp = acornsText.GetComponent<Text>();
+            tokensTextTemp.text = "ACORNS: " + acorns;
+      }
+
       public void updateStatsDisplay(){
             Text healthTextTemp = healthText.GetComponent<Text>();
             healthTextTemp.text = "HEALTH: " + playerHealth; 
@@ -68,8 +77,7 @@ public bool isDefending = false;
                     mySlider.IncrementProgress(-0.05f); // Adjust the argument as needed
             }
 
-            Text tokensTextTemp = acornsText.GetComponent<Text>();
-            tokensTextTemp.text = "ACORNS: " + acorns;
+           
       } 
 
     //   public void playerDies(){

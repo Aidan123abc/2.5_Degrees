@@ -23,8 +23,9 @@ public class PickUp : MonoBehaviour{
                   StartCoroutine(DestroyThis());
 
                   if (isHealthPickUp == true) {
-                        gameHandler.playerGetHit(healthBoost * -1);
+                        //gameHandler.playerGetHit(healthBoost * -1);       // gives health
                         //playerPowerupVFX.powerup();
+                        gameHandler.playerPickUp(1);
                   }
 
                   
