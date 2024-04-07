@@ -13,6 +13,7 @@ public class EnemyMoveHit : MonoBehaviour {
        public int EnemyLives = 3;
        private GameHandler gameHandler;
 
+
        public float attackRange = 10;
        public bool isAttacking = false;
        private float scaleX;
@@ -30,9 +31,11 @@ public class EnemyMoveHit : MonoBehaviour {
                   gameHandler = GameObject.FindWithTag ("GameHandler").GetComponent<GameHandler> ();
               }
        }
-
-       void Update () {
+       void FixedUpdate() {
               float DistToPlayer = Vector3.Distance(transform.position, target.position);
+
+//             
+// transform.position = MovePos;
 
               if ((target != null) && (DistToPlayer <= attackRange)){
                      transform.position = Vector2.MoveTowards (transform.position, target.position, speed * Time.deltaTime);
