@@ -353,6 +353,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_movehit
       objectReference: {fileID: 0}
+    - target: {fileID: 7707984525960439023, guid: 1414411bc7cf041eba20c8ffbd378e56, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8849033402658171745, guid: 1414411bc7cf041eba20c8ffbd378e56, type: 3}
       propertyPath: m_RootOrder
       value: 2
