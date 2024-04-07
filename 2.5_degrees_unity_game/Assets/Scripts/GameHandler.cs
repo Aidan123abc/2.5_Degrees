@@ -16,6 +16,10 @@ public class GameHandler : MonoBehaviour
     public GameObject tempText;
     public int temp; 
 
+    public GameObject objectToSpawn;
+    public Vector3 origin = Vector3.zero;
+    public float radius = 10;
+
 public bool isDefending = false; 
 
       public static bool stairCaseUnlocked = false; 
@@ -47,6 +51,8 @@ public bool isDefending = false;
             if (Input.GetKeyDown(KeyCode.Q)){
                   acorns -= acorns;
                   temp = temp - 1;
+                  Vector3 randomPosition = origin + Random.insideUnitSphere * radius;
+                  Instantiate(objectToSpawn, randomPosition, Quaternion.identity);
                   updateStatsDisplay();
             }
       }
