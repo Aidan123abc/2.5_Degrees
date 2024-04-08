@@ -24,6 +24,8 @@ public class GameHandler : MonoBehaviour
     public string fullHealthText = "You are already at full health!";
     public GameObject PopUpTextPrefab;
 
+    private Transform playerTransform;
+
 public bool isDefending = false; 
 
       public static bool stairCaseUnlocked = false; 
@@ -34,6 +36,9 @@ public bool isDefending = false;
 
       void Start(){
             player = GameObject.FindWithTag("Player");
+            if (player != null) {
+                  playerTransform = player.transform;
+            }
             // sceneName = SceneManager.GetActiveScene().name;
             //if (sceneName=="MainMenu"){ //uncomment these two lines when the MainMenu exists
                   playerHealth = StartPlayerHealth;
@@ -44,9 +49,12 @@ public bool isDefending = false;
             Text tempTextDisplay = tempText.GetComponent<Text>();
             tokensTextTemp.text = "ACORNS: " + acorns;
             tempTextDisplay.text = "Temperature: " + temp + " Degrees";
+
       }
 
         void Update () {
+            
+
             if (Input.GetKeyDown(KeyCode.E)){
                   if ((acorns > 0) && (playerHealth < 100)) {
                   acorns -= acorns;
@@ -59,8 +67,9 @@ public bool isDefending = false;
                   if (acorns > 0) {
                   acorns -= acorns;
                   temp = temp - 1;
-                  Vector3 randomPosition = origin + Random.insideUnitSphere * radius;
-                  Instantiate(objectToSpawn, randomPosition, Quaternion.identity);
+                  //Vector3 randomPosition = origin + Random.insideUnitSphere * radius;
+                  Vector3 playerPosition = playerTransform.position * 1.1f;
+                  Instantiate(objectToSpawn, playerPosition, Quaternion.identity);
                   updateStatsDisplay();
                   } else {Debug.Log("There are no acorns to eat! Collect more!");}
             }
