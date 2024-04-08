@@ -24,6 +24,7 @@ public class GameHandler : MonoBehaviour
     public string fullHealthText = "You are already at full health!";
     public GameObject PopUpTextPrefab;
 
+
     private Transform playerTransform;
 
 public bool isDefending = false; 
@@ -134,8 +135,9 @@ public bool isDefending = false;
       
       public void showFloatingText() {
            
-
-           Instantiate(PopUpTextPrefab, transform.position, Quaternion.identity,transform); 
+           Debug.Log("CalledFloating");
+            Vector3 playerPosition = playerTransform.position * 1.3f;
+            Instantiate(PopUpTextPrefab, playerPosition, Quaternion.identity, transform);
       }
 
     //   public void playerDies(){
