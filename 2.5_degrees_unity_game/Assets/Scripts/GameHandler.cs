@@ -20,6 +20,10 @@ public class GameHandler : MonoBehaviour
     public Vector3 origin = Vector3.zero;
     public float radius = 10;
 
+    public string noAcornsText = "You have no acorns! Collect more!";
+    public string fullHealthText = "You are already at full health!";
+    public GameObject PopUpTextPrefab;
+
 public bool isDefending = false; 
 
       public static bool stairCaseUnlocked = false; 
@@ -44,11 +48,12 @@ public bool isDefending = false;
 
         void Update () {
             if (Input.GetKeyDown(KeyCode.E)){
-                  if (acorns > 0) {
+                  if ((acorns > 0) && (playerHealth < 100)) {
                   acorns -= acorns;
                   playerHealth += 3;
                   updateStatsDisplay();
-                  } 
+                  } else if (acorns < 1) {showFloatingText();} 
+                  else if (playerHealth > 99) {Debug.Log("You are already at full health!");}
             }
             if (Input.GetKeyDown(KeyCode.Q)){
                   if (acorns > 0) {
@@ -57,7 +62,7 @@ public bool isDefending = false;
                   Vector3 randomPosition = origin + Random.insideUnitSphere * radius;
                   Instantiate(objectToSpawn, randomPosition, Quaternion.identity);
                   updateStatsDisplay();
-                  }
+                  } else {Debug.Log("There are no acorns to eat! Collect more!");}
             }
       }
 
@@ -118,6 +123,11 @@ public bool isDefending = false;
 
       } 
       
+      public void showFloatingText() {
+           
+
+           Instantiate(PopUpTextPrefab, transform.position, Quaternion.identity,transform); 
+      }
 
     //   public void playerDies(){
     //         player.GetComponent<PlayerHurt>().playerDead();       //play Death animation 

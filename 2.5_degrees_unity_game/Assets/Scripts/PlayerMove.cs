@@ -42,6 +42,7 @@ public class PlayerMove : MonoBehaviour {
 
 	// Update the Animator's Speed parameter
 	//animator.SetFloat("Speed", runSpeed * Mathf.Abs(hMove.x));
+	
 	if (hMove.x != 0){
 	animator.SetBool("Walk", true);
 	} else {
@@ -65,6 +66,8 @@ public class PlayerMove : MonoBehaviour {
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
+
+
 
 	// // void eat() 
 	// // {
