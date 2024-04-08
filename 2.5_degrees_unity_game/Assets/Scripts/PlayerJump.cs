@@ -49,7 +49,7 @@ public class PlayerJump : MonoBehaviour {
             Collider2D enemyCheck = Physics2D.OverlapCircle(feet.position, 0.5f, enemyLayer);
             if (groundCheck != null) //|| (enemyCheck != null)) 
             { 
-                  Debug.Log("I am trouching ground!");
+                  // Debug.Log("I am trouching ground!");
                   jumpTimes = 0;
                   return true;
             }

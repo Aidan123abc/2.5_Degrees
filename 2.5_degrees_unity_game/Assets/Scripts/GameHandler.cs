@@ -14,7 +14,7 @@ public class GameHandler : MonoBehaviour
     public static int acorns = 0; 
     public GameObject acornsText; 
     public GameObject tempText;
-    public int temp; 
+    public static int temp; 
 
     public GameObject objectToSpawn;
     public Vector3 origin = Vector3.zero;
@@ -44,16 +44,20 @@ public bool isDefending = false;
 
         void Update () {
             if (Input.GetKeyDown(KeyCode.E)){
+                  if (acorns > 0) {
                   acorns -= acorns;
-                  playerHealth += 5;
+                  playerHealth += 3;
                   updateStatsDisplay();
+                  } 
             }
             if (Input.GetKeyDown(KeyCode.Q)){
+                  if (acorns > 0) {
                   acorns -= acorns;
                   temp = temp - 1;
                   Vector3 randomPosition = origin + Random.insideUnitSphere * radius;
                   Instantiate(objectToSpawn, randomPosition, Quaternion.identity);
                   updateStatsDisplay();
+                  }
             }
       }
 
@@ -108,6 +112,10 @@ public bool isDefending = false;
                     mySlider.IncrementProgress(-0.5f); // Adjust the argument as needed
             }
   
+      }
+
+      public void updateTemperature(int amount) {
+
       } 
       
 
