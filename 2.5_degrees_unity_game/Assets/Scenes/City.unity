@@ -11549,6 +11549,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c6f191ee0907408cbd105a920fd8fe4, type: 3}
+--- !u!1 &1155881779 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6031543901114730707, guid: 150ddb3ffdb9534429e48cef7a971d69, type: 3}
+  m_PrefabInstance: {fileID: 1834892309}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1219257825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12394,6 +12399,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BG_center
       objectReference: {fileID: 0}
+    - target: {fileID: 2240158917741362800, guid: 48625e51d6a6744618987d40a2b8885e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1155881779}
     - target: {fileID: 4601938864506808126, guid: 48625e51d6a6744618987d40a2b8885e, type: 3}
       propertyPath: m_RootOrder
       value: 14
