@@ -17,7 +17,7 @@ public class GameHandler : MonoBehaviour
     public static int temp; 
 
     public GameObject objectToSpawn;
-    public Vector3 origin = Vector3.zero;
+    public Vector2 origin = Vector2.zero;
     public float radius = 10;
 
     public string noAcornsText = "You have no acorns! Collect more!";
@@ -68,8 +68,8 @@ public bool isDefending = false;
                   if (acorns > 0) {
                   acorns -= acorns;
                   temp = temp - 1;
-                  //Vector3 randomPosition = origin + Random.insideUnitSphere * radius;
-                  Vector3 playerPosition = playerTransform.position * 1.1f;
+                  //Vector2 randomPosition = origin + Random.insideUnitSphere * radius;
+                  Vector2 playerPosition = playerTransform.position * 1.1f;
                   Instantiate(objectToSpawn, playerPosition, Quaternion.identity);
                   updateStatsDisplay();
                   } else {Debug.Log("There are no acorns to eat! Collect more!");}
@@ -136,7 +136,7 @@ public bool isDefending = false;
       public void showFloatingText() {
            
            Debug.Log("CalledFloating");
-            Vector3 playerPosition = playerTransform.position * 1.3f;
+            Vector2 playerPosition = playerTransform.position * 1.3f;
             Instantiate(PopUpTextPrefab, playerPosition, Quaternion.identity, transform);
       }
 
