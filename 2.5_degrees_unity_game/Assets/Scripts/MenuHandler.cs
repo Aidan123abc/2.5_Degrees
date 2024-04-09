@@ -25,4 +25,8 @@ public class MenuHandler : MonoBehaviour {
       public void Home() {
         SceneManager.LoadScene("Title_Page");
       }
+
+      public void LoadWinter() {
+            SceneManager.LoadScene("Winter_Level");
+      }
 }
