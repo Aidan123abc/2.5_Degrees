@@ -939,6 +939,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35650f67b2297496ea0435d6828ed62b, type: 3}
+--- !u!1 &438203435 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6031543901114730707, guid: 150ddb3ffdb9534429e48cef7a971d69, type: 3}
+  m_PrefabInstance: {fileID: 1834892309}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &466334565
 GameObject:
   m_ObjectHideFlags: 0
@@ -5006,7 +5011,7 @@ PrefabInstance:
     - target: {fileID: 6406961069774658663, guid: 5c6f191ee0907408cbd105a920fd8fe4, type: 3}
       propertyPath: Squirrel
       value: 
-      objectReference: {fileID: 42976774}
+      objectReference: {fileID: 438203435}
     - target: {fileID: 6406961069774658663, guid: 5c6f191ee0907408cbd105a920fd8fe4, type: 3}
       propertyPath: tempText
       value: 

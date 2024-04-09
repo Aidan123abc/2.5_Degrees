@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameHandler : MonoBehaviour
 {
@@ -63,7 +64,7 @@ public bool isDefending = false;
                   playerHealth += 3;
                   updateStatsDisplay();
                   } else if (acorns < 1) {
-                        // showFloatingText();
+                        showFloatingText(noAcornsText);
                         } 
                   else if (playerHealth > 99) {Debug.Log("You are already at full health!");}
             }
@@ -137,11 +138,21 @@ public bool isDefending = false;
 
       } 
       
-      public void showFloatingText() {
-           
-           Debug.Log("CalledFloating");
+      public void showFloatingText(string message) {
+            Debug.Log("CalledFloating");
+            // Instantiate the popup text prefab at the player's position and keep a reference to the instantiated object
             Vector2 playerPosition = playerTransform.position * 1.3f;
-            Instantiate(PopUpTextPrefab, playerPosition, Quaternion.identity, transform);
+            GameObject instantiatedPopUpText = Instantiate(PopUpTextPrefab, playerPosition, Quaternion.identity);
+            
+
+            // Now, access the TextMeshProUGUI component on the instantiated object
+            TMPro.TextMeshPro textMesh = instantiatedPopUpText.GetComponent<TMPro.TextMeshPro>();
+            textMesh.SetText(message);
+            // if (textMesh != null) {
+            //       textMesh.text = "TEST STRING"; // Now you are setting the text on the instantiated object
+            // } else {
+            //       Debug.LogError("TextMeshProUGUI component not found on the instantiated PopUpTextPrefab.");
+            // }
       }
 
       public void SquirrelHurtAnimation() {
