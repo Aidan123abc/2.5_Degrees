@@ -26,6 +26,7 @@ public class GameHandler : MonoBehaviour
 
 
     private Transform playerTransform;
+    public GameObject Squirrel;
 
 public bool isDefending = false; 
 
@@ -61,7 +62,9 @@ public bool isDefending = false;
                   acorns -= acorns;
                   playerHealth += 3;
                   updateStatsDisplay();
-                  } else if (acorns < 1) {showFloatingText();} 
+                  } else if (acorns < 1) {
+                        // showFloatingText();
+                        } 
                   else if (playerHealth > 99) {Debug.Log("You are already at full health!");}
             }
             if (Input.GetKeyDown(KeyCode.Q)){
@@ -85,7 +88,8 @@ public bool isDefending = false;
            if (isDefending == false){
                   playerHealth -= damage; 
                   if (playerHealth >=0){ 
-                        updateStatsDisplay(); 
+                        updateStatsDisplay();
+                        SquirrelHurtAnimation();
                   } 
                   if (damage > 0){ 
                         // player.GetComponent<PlayerHurt>().playerHit();       //play GetHit animation 
@@ -139,6 +143,30 @@ public bool isDefending = false;
             Vector3 playerPosition = playerTransform.position * 1.3f;
             Instantiate(PopUpTextPrefab, playerPosition, Quaternion.identity, transform);
       }
+      public void SquirrelHurtAnimation()
+    {
+        // Ensure the Squirrel GameObject is assigned in the inspector.
+        if (Squirrel != null)
+        {
+            // Get the SquirrelController script component from the Squirrel GameObject.
+            SquirrelController squirrelScript = Squirrel.GetComponent<SquirrelController>();
+
+            // Ensure the SquirrelController script was found.
+            if (squirrelScript != null)
+            {
+                // Trigger the hurt animation.
+                squirrelScript.TriggerHurtAnimation();
+            }
+            else
+            {
+                Debug.LogError("SquirrelController script not found on the Squirrel GameObject.");
+            }
+        }
+        else
+        {
+            Debug.LogError("Squirrel GameObject is not assigned in the GameHandler script.");
+        }
+    }
 
     //   public void playerDies(){
     //         player.GetComponent<PlayerHurt>().playerDead();       //play Death animation 

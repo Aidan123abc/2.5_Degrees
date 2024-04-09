@@ -150,6 +150,8 @@ GameObject:
   - component: {fileID: 4328503566248611875}
   - component: {fileID: 7168392012781233584}
   - component: {fileID: 2897008117024663527}
+  - component: {fileID: 7635731799211992927}
+  - component: {fileID: 8315642405616929123}
   m_Layer: 7
   m_Name: Squirrel
   m_TagString: Player
@@ -249,6 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 5
+  gameHandler: {fileID: 0}
 --- !u!114 &2897008117024663527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4b56683bc1f44c2697fbd69130663d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 4
+  jumpForce: 7
   feet: {fileID: 975294092925929988}
   groundLayer:
     serializedVersion: 2
@@ -269,6 +272,32 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
-  canJump: 1
+  canJump: 0
   jumpTimes: 0
   isAlive: 1
+--- !u!114 &7635731799211992927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6031543901114730707}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a90eb55488b13140a19478e2f2e9e46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallMultiplier: 2.5
+  lowJumpMultiplier: 2
+--- !u!114 &8315642405616929123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6031543901114730707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a02fcca54fb39264caa5c658a14504e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

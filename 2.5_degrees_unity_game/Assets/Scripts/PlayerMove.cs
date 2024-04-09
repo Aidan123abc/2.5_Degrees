@@ -25,12 +25,10 @@ public class PlayerMove : MonoBehaviour {
 	Vector3 hMove = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0.0f);
 	transform.position += hMove * runSpeed * Time.deltaTime;
 
-	// // 'E' eats acorns 
-	// if (Input.GetKeyDown(KeyCode.E))
-    // {
-    //     eat();
-	// 	animator.SetBool("Eat", true);
-    // } else {animator.SetBool("Eat", false);}
+	// 'E' eats acorns 
+	if (Input.GetKeyDown(KeyCode.E)) {
+			animator.SetTrigger("Eat");
+		}
 
 	// // 'P' plants trees 
 	// if (Input.GetKeyDown(KeyCode.P)) 

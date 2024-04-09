@@ -6,6 +6,7 @@ public class PlayerJump : MonoBehaviour {
 
       //public Animator anim;
       private Rigidbody2D rb;
+      private Animator animator;
       public float jumpForce = 20f;
       public Transform feet;
       public LayerMask groundLayer;
@@ -14,19 +15,24 @@ public class PlayerJump : MonoBehaviour {
       public int jumpTimes = 0; 
       public bool isAlive = true;
       //public AudioSource JumpSFX; 
+      
 
       void Start(){
             //anim = gameObject.GetComponentInChildren<Animator>(); 
             rb = GetComponent<Rigidbody2D>();
+
+            animator = GetComponentInChildren<Animator>();
       }
 
      void Update() {
             
             if ((IsGrounded()) && (jumpTimes <= 1)){ // for single jump only
                   canJump = true;
+                  animator.SetBool("Fly", false);
             } 
             else { // for single jump only
                   canJump = false;
+                  animator.SetBool("Fly", true);
             }
 
            if ((Input.GetButtonDown("Jump")) && (canJump) && (isAlive == true)) {
