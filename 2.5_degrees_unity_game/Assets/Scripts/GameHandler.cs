@@ -143,8 +143,8 @@ public bool isDefending = false;
             Vector2 playerPosition = playerTransform.position * 1.3f;
             Instantiate(PopUpTextPrefab, playerPosition, Quaternion.identity, transform);
       }
-      public void SquirrelHurtAnimation()
-    {
+
+      public void SquirrelHurtAnimation() {
         // Ensure the Squirrel GameObject is assigned in the inspector.
         if (Squirrel != null)
         {
