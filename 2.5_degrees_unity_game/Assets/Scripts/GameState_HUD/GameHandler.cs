@@ -27,9 +27,10 @@ public class GameHandler : MonoBehaviour
 
 
     private Transform playerTransform;
-    public GameObject Squirrel;
+    private GameObject Squirrel;
 
-public bool isDefending = false; 
+
+      public bool isDefending = false; 
 
       public static bool stairCaseUnlocked = false; 
       //this is a flag check. Add to other scripts: GameHandler.stairCaseUnlocked = true; 
@@ -38,9 +39,9 @@ public bool isDefending = false;
       public static string lastLevelDied;  //allows replaying the Level where you died
 
       void Start(){
-            player = GameObject.FindWithTag("Player");
-            if (player != null) {
-                  playerTransform = player.transform;
+            Squirrel = GameObject.FindWithTag("Player");
+            if (Squirrel != null) {
+                  playerTransform = Squirrel.transform;
             }
             // sceneName = SceneManager.GetActiveScene().name;
             //if (sceneName=="MainMenu"){ //uncomment these two lines when the MainMenu exists
