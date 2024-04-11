@@ -67,7 +67,7 @@ public class GameHandler : MonoBehaviour
                   } else if (acorns < 1) {
                         showFloatingText(noAcornsText);
                         } 
-                  else if (playerHealth > 99) {Debug.Log("You are already at full health!");}
+                  else if (playerHealth > 99) {showFloatingText(fullHealthText);}
             }
             if (Input.GetKeyDown(KeyCode.Q)){
                   if (acorns > 0) {
@@ -142,7 +142,7 @@ public class GameHandler : MonoBehaviour
       public void showFloatingText(string message) {
             Debug.Log("CalledFloating");
             // Instantiate the popup text prefab at the player's position and keep a reference to the instantiated object
-            Vector2 playerPosition = playerTransform.position * 1.3f;
+            Vector2 playerPosition = playerTransform.position * 1.1f;
             GameObject instantiatedPopUpText = Instantiate(PopUpTextPrefab, playerPosition, Quaternion.identity);
             
 

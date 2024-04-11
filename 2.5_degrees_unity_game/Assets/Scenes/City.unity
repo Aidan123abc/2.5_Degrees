@@ -2359,7 +2359,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 31dbd3da37b2c45a28205716feaef88b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.34117648, g: 0.34117648, b: 0.34117648, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4906,6 +4906,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 629684058}
   - {fileID: 900412341}
   - {fileID: 1684002248}
   - {fileID: 1941829182}
@@ -4913,7 +4914,6 @@ RectTransform:
   - {fileID: 616723821}
   - {fileID: 466334566}
   - {fileID: 357026412}
-  - {fileID: 629684058}
   - {fileID: 231371126}
   - {fileID: 1285863999}
   m_Father: {fileID: 0}
@@ -6414,7 +6414,7 @@ PrefabInstance:
     - target: {fileID: 2240158917741362800, guid: 48625e51d6a6744618987d40a2b8885e, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 42976774}
+      objectReference: {fileID: 438203435}
     - target: {fileID: 4601938864506808126, guid: 48625e51d6a6744618987d40a2b8885e, type: 3}
       propertyPath: m_RootOrder
       value: 14
