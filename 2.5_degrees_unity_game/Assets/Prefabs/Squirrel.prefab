@@ -148,9 +148,6 @@ GameObject:
   - component: {fileID: 8373689654897366442}
   - component: {fileID: 3467600599052839113}
   - component: {fileID: 4328503566248611875}
-  - component: {fileID: 7168392012781233584}
-  - component: {fileID: 2897008117024663527}
-  - component: {fileID: -5092625441562154360}
   - component: {fileID: 1955774780927710356}
   m_Layer: 7
   m_Name: Squirrel
@@ -238,56 +235,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &7168392012781233584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6031543901114730707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 865e378c18bd44534bce30a83fa1b59f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  runSpeed: 5
-  gameHandler: {fileID: 0}
---- !u!114 &2897008117024663527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6031543901114730707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4b56683bc1f44c2697fbd69130663d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpForce: 7
-  feet: {fileID: 975294092925929988}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  canJump: 0
-  jumpTimes: 0
-  isAlive: 1
---- !u!114 &-5092625441562154360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6031543901114730707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfbf583fc96a84e42967779a076dc696, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 4328503566248611875}
 --- !u!114 &1955774780927710356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,3 +247,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02fcca54fb39264caa5c658a14504e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  runSpeed: 5
+  gameHandler: {fileID: 0}
+  jumpForce: 5
+  feet: {fileID: 975294092925929988}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  canJump: 0
+  jumpTimes: 0
+  isAlive: 1

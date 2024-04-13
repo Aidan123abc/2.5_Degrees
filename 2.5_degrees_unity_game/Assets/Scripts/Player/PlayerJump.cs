@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerJump : MonoBehaviour {
 
-      //public Animator anim;
       private Rigidbody2D rb;
       private Animator animator;
       public float jumpForce = 20f;
@@ -40,7 +39,7 @@ public class PlayerJump : MonoBehaviour {
             }
       }
 
-       void Jump() {
+      void Jump() {
             jumpTimes += 1;
             rb.velocity = Vector2.up * jumpForce;
             // anim.SetTrigger("Jump");

@@ -139,6 +139,10 @@ public class GameHandler : MonoBehaviour
 
       } 
       
+      public int getAcornCount() {
+            return acorns;
+      }
+      
       public void showFloatingText(string message) {
             Debug.Log("CalledFloating");
             // Instantiate the popup text prefab at the player's position and keep a reference to the instantiated object
