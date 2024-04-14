@@ -11296,7 +11296,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 12
-      m_TileSpriteIndex: 12
+      m_TileSpriteIndex: 14
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -14499,12 +14499,12 @@ Tilemap:
     m_Data: {fileID: -1827581689, guid: fb1f9b448b5ff4ed1a0103a169aba04e, type: 3}
   - m_RefCount: 41
     m_Data: {fileID: -118630415, guid: fb1f9b448b5ff4ed1a0103a169aba04e, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -1553454707, guid: fb1f9b448b5ff4ed1a0103a169aba04e, type: 3}
-  - m_RefCount: 6
-    m_Data: {fileID: 1221062084, guid: fb1f9b448b5ff4ed1a0103a169aba04e, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 6
+    m_Data: {fileID: 1221062084, guid: fb1f9b448b5ff4ed1a0103a169aba04e, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -1553454707, guid: fb1f9b448b5ff4ed1a0103a169aba04e, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 1324
     m_Data:
@@ -14748,7 +14748,7 @@ GameObject:
   - component: {fileID: 823469896}
   - component: {fileID: 823469897}
   m_Layer: 0
-  m_Name: Winter_Background_ (2)
+  m_Name: BG_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15556,7 +15556,7 @@ GameObject:
   - component: {fileID: 2142671512}
   - component: {fileID: 2142671513}
   m_Layer: 0
-  m_Name: Winter_Background_ (3)
+  m_Name: BG_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
