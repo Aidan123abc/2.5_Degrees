@@ -131,6 +131,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6406961069774658663, guid: 5c6f191ee0907408cbd105a920fd8fe4, type: 3}
+      propertyPath: tempText
+      value: 
+      objectReference: {fileID: 802708124}
+    - target: {fileID: 6406961069774658663, guid: 5c6f191ee0907408cbd105a920fd8fe4, type: 3}
+      propertyPath: acornsText
+      value: 
+      objectReference: {fileID: 439975697}
+    - target: {fileID: 6406961069774658663, guid: 5c6f191ee0907408cbd105a920fd8fe4, type: 3}
+      propertyPath: healthText
+      value: 
+      objectReference: {fileID: 583259208}
+    - target: {fileID: 6406961069774658663, guid: 5c6f191ee0907408cbd105a920fd8fe4, type: 3}
+      propertyPath: objectToSpawn
+      value: 
+      objectReference: {fileID: 3483061203112521796, guid: c795e63c802c64e07a9e585b425c5e70, type: 3}
+    - target: {fileID: 6406961069774658663, guid: 5c6f191ee0907408cbd105a920fd8fe4, type: 3}
+      propertyPath: PopUpTextPrefab
+      value: 
+      objectReference: {fileID: 7870172058806046165, guid: f2deb5a658861439da2a5f21f59bd6d3, type: 3}
     - target: {fileID: 7831659313749794832, guid: 5c6f191ee0907408cbd105a920fd8fe4, type: 3}
       propertyPath: m_Name
       value: GameHandler
@@ -589,6 +609,11 @@ RectTransform:
   m_AnchoredPosition: {x: 78.22, y: -8.44}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &439975697 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3129322698597363325, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+  m_PrefabInstance: {fileID: 1101199951}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &462811336
 GameObject:
   m_ObjectHideFlags: 0
@@ -12143,6 +12168,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &583259208 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5260180498891855961, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+  m_PrefabInstance: {fileID: 1101199951}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &683145614
 GameObject:
   m_ObjectHideFlags: 0
@@ -12935,6 +12965,11 @@ RectTransform:
   m_AnchoredPosition: {x: 64.73, y: -14.56}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &802708124 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7134632550727401200, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+  m_PrefabInstance: {fileID: 1101199951}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &905791571
 GameObject:
   m_ObjectHideFlags: 0
