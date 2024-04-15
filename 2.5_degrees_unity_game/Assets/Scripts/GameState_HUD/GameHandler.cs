@@ -73,11 +73,13 @@ public class GameHandler : MonoBehaviour
                   if (acorns > 0) {
                   acorns -= acorns;
                   temp = temp - 1;
-                  //Vector2 randomPosition = origin + Random.insideUnitSphere * radius;
-                  Vector2 playerPosition = playerTransform.position * 1.1f;
-                  Instantiate(objectToSpawn, playerPosition, Quaternion.identity);
+                  Vector2 treeSpawnLocation;
+                  treeSpawnLocation = new Vector2((playerTransform.position.x + 0.01f), playerTransform.position.y);
+                  GameObject Tree = Instantiate(objectToSpawn, treeSpawnLocation, Quaternion.identity);
+                  // TreeGrowthAnim treeScript = Tree.GetComponent<TreeGrowthAnim>();
                   updateStatsDisplay();
-                  } else {Debug.Log("There are no acorns to eat! Collect more!");}
+
+                  } else {Debug.Log("There are no acorns to plant! Collect more!");}
             }
       }
 
