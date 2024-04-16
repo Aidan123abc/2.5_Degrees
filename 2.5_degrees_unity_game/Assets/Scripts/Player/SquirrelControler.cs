@@ -7,6 +7,7 @@ public class SquirrelController : MonoBehaviour
     private bool FaceRight = true; 
     public float runSpeed = 10f;
 	public GameHandler gameHandler;
+    public Transform respawnPosition;
 
     //Jumping Variables
     private Rigidbody2D rb;
@@ -158,12 +159,16 @@ public class SquirrelController : MonoBehaviour
     }
 
     private void OnTriggerStay2D(Collider2D collision)
+{
+    if (collision.CompareTag("Ladder"))
     {
-        if (collision.CompareTag("Ladder"))
-        {
-            isLadder = true;
-        }
+        isLadder = true;
     }
+    if (collision.CompareTag("Respawn"))
+    {
+        HandleRespawn();
+    }
+}
 
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -178,5 +183,13 @@ public class SquirrelController : MonoBehaviour
         Debug.Log("DIEEEE");
         isAlive = false;
         animator.SetTrigger("Die");
+    }
+
+    private void HandleRespawn()
+    {
+        transform.position = respawnPosition.position; // Move the squirrel to the respawn position
+        isAlive = true; // Make sure the squirrel is marked as alive if it was not
+        rb.velocity = Vector2.zero; // Reset velocity
+        // animator.SetTrigger("Respawn"); // Trigger a respawn animation if you have one
     }
 }
