@@ -20,7 +20,7 @@ public class PlayerMove : MonoBehaviour {
 		gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
 	}
 
-	void Update ()
+	void FixedUpdate ()
 	{
 	Vector3 hMove = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0.0f);
 	transform.position += hMove * runSpeed * Time.deltaTime;

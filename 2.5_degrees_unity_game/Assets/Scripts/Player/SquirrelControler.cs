@@ -42,7 +42,7 @@ public class SquirrelController : MonoBehaviour
         gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
     }
 
-    void Update()
+    void FixedUpdate()
 {
     if (isAlive) {
     // Movement Conditions
@@ -96,11 +96,8 @@ public class SquirrelController : MonoBehaviour
         animator.SetTrigger("Scratch");
     }
     }
-}
 
-    private void FixedUpdate()
-    {
-        if (isClimbing)
+    if (isClimbing)
         {
             rb.gravityScale = 0f;
             // rb.velocity = new Vector2(rb.velocity.x, vertical * speed);
@@ -111,7 +108,12 @@ public class SquirrelController : MonoBehaviour
             rb.gravityScale = 1f;
             animator.SetBool("ClimbLadder", false);
         }
-    }
+}
+
+    // private void FixedUpdate()
+    // {
+        
+    // }
 
     private void Turn()
 	{
