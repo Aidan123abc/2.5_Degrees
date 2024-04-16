@@ -51,8 +51,8 @@ public class GameHandler : MonoBehaviour
             updateStatsDisplay();
             Text tokensTextTemp = acornsText.GetComponent<Text>();
             Text tempTextDisplay = tempText.GetComponent<Text>();
-            tokensTextTemp.text = "ACORNS: " + acorns;
-            tempTextDisplay.text = "Temperature: " + temp + " Degrees";
+            tokensTextTemp.text = "#" + acorns;
+            tempTextDisplay.text = "Temperature: " + temp;
 
       }
 
