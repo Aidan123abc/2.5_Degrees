@@ -36,6 +36,7 @@ public class tempSlider : MonoBehaviour
     // adding to progress 
     public void IncrementProgress(float newProgress) {
 
+        Debug.Log("PRGORESS?");
         targetProgress = slider.value += newProgress;
     }
 }

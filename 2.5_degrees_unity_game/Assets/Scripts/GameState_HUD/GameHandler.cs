@@ -73,10 +73,10 @@ public class GameHandler : MonoBehaviour
 
       public void playerEat() {
              if ((acorns > 0) && (playerHealth < 100)) {
-                  acorns -= acorns;
+                  acorns = acorns - 1;
                   playerHealth += 3;
                   updateStatsDisplay();
-                  updateHealthSlider(3);
+                  updateHealthSlider(0.03f);
                   } else if (acorns < 1) {
                         showFloatingText(noAcornsText);
                         } 
@@ -94,7 +94,7 @@ public class GameHandler : MonoBehaviour
                   GameObject Tree = Instantiate(objectToSpawn, treeSpawnLocation, Quaternion.identity);
                   // TreeGrowthAnim treeScript = Tree.GetComponent<TreeGrowthAnim>();
                   updateStatsDisplay();
-                  updateTemperatureSlider(-1);
+                  updateTemperatureSlider(-0.01f);
 
                   } else {showFloatingText(NotEnoughText);}
       }
@@ -108,8 +108,8 @@ public class GameHandler : MonoBehaviour
            if (isDefending == false){
                   playerHealth -= damage; 
                   if (playerHealth >=0){ 
-                        updateStatsDisplay();
-                        updateHealthSlider(-damage);
+                        updateStatsDisplay(); 
+                        updateHealthSlider(-0.03f);
                         SquirrelHurtAnimation();
                   } 
                   if (damage > 0){ 
@@ -141,7 +141,7 @@ public class GameHandler : MonoBehaviour
             healthTextTemp.text = "HEALTH: " + playerHealth; 
 
             Text tokensTextTemp = acornsText.GetComponent<Text>();
-            tokensTextTemp.text = "ACORNS: " + acorns;
+            tokensTextTemp.text = "Acorns: " + acorns;
 
             Text tempTextDisplay = tempText.GetComponent<Text>();
             tempTextDisplay.text = "Temperature: " + temp;
@@ -150,15 +150,16 @@ public class GameHandler : MonoBehaviour
   
       }
 
-      public void updateTemperatureSlider(int amount) {
+      public void updateTemperatureSlider(float amount) {
              //updates slider bar
             if (myTempSlider != null) {
                     myTempSlider.IncrementProgress(amount); // Adjust the argument as needed
             }
       } 
 
-      public void updateHealthSlider(int amount) {
+      public void updateHealthSlider(float amount) {
             //updates slider bar
+            Debug.Log("Hello?");
             if (myHealthSlider != null) {
                     myHealthSlider.IncrementProgress(amount); // Adjust the argument as needed
             }
