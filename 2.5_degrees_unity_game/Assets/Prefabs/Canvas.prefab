@@ -1336,6 +1336,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5868402081767079211}
     m_Modifications:
+    - target: {fileID: 5310904170015616236, guid: 50b9b6f2091b04fbf8ff48192cc43066, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11500000, guid: 65ceb102823dc4e279c8937d8cbd2b80, type: 3}
+    - target: {fileID: 5310904170015616236, guid: 50b9b6f2091b04fbf8ff48192cc43066, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5918215766916753855, guid: 50b9b6f2091b04fbf8ff48192cc43066, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1445,6 +1453,10 @@ PrefabInstance:
     - target: {fileID: 5444734906393065507, guid: d6c180ee2c9bd40a19373a64c48a5c81, type: 3}
       propertyPath: m_Name
       value: Map
+      objectReference: {fileID: 0}
+    - target: {fileID: 5444734906393065507, guid: d6c180ee2c9bd40a19373a64c48a5c81, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6461371663934093692, guid: d6c180ee2c9bd40a19373a64c48a5c81, type: 3}
       propertyPath: m_Pivot.x
@@ -1567,6 +1579,10 @@ PrefabInstance:
     - target: {fileID: 3666515747518652235, guid: 35650f67b2297496ea0435d6828ed62b, type: 3}
       propertyPath: m_Name
       value: PauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 3666515747518652235, guid: 35650f67b2297496ea0435d6828ed62b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4363615586513987773, guid: 35650f67b2297496ea0435d6828ed62b, type: 3}
       propertyPath: m_AnchorMax.x
