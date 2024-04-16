@@ -12,17 +12,17 @@ public class PauseMenuHandler : MonoBehaviour
      public static bool GameisPaused = false;
         public GameObject pauseMenuUI;
         public GameObject MapUI;
-        // public AudioMixer mixer;
-        // public static float volumeLevel = 1.0f;
-        //private Slider sliderVolumeCtrl;
+        public AudioMixer mixer;
+        public static float volumeLevel = 1.0f;
+        private Slider sliderVolumeCtrl;
 
         void Awake (){
-                // SetLevel (volumeLevel);
-                // GameObject sliderTemp = GameObject.FindWithTag("PauseMenuSlider");
-                // if (sliderTemp != null){
-                //         sliderVolumeCtrl = sliderTemp.GetComponent<Slider>();
-                //         sliderVolumeCtrl.value = volumeLevel;
-                // }
+                SetLevel (volumeLevel);
+                GameObject sliderTemp = GameObject.FindWithTag("PauseMenuSlider");
+                if (sliderTemp != null){
+                        sliderVolumeCtrl = sliderTemp.GetComponent<Slider>();
+                        sliderVolumeCtrl.value = volumeLevel;
+                }
         }
 
         void Start (){
@@ -85,7 +85,7 @@ public class PauseMenuHandler : MonoBehaviour
         }
 
         public void SetLevel (float sliderValue){
-                // mixer.SetFloat("MusicVolume", Mathf.Log10 (sliderValue) * 20);
-                // volumeLevel = sliderValue;
+                mixer.SetFloat("MusicVolume", Mathf.Log10 (sliderValue) * 20);
+                volumeLevel = sliderValue;
         }
 }

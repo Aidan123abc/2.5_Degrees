@@ -16,12 +16,15 @@ public class GameHandler : MonoBehaviour
     public GameObject acornsText; 
     public GameObject tempText;
     public static int temp; 
+    public tempSlider myTempSlider;
+    public tempSlider myHealthSlider;
 
     public GameObject objectToSpawn;
     public Vector2 origin = Vector2.zero;
     public float radius = 10;
 
     public string noAcornsText = "You have no acorns! Collect more!";
+    public string NotEnoughText = "You need 3 acorns to plant!";
     public string fullHealthText = "You are already at full health!";
     public GameObject PopUpTextPrefab;
 
@@ -49,6 +52,7 @@ public class GameHandler : MonoBehaviour
                   temp = startTemp;
             //}
             updateStatsDisplay();
+
             Text tokensTextTemp = acornsText.GetComponent<Text>();
             Text tempTextDisplay = tempText.GetComponent<Text>();
             tokensTextTemp.text = "#" + acorns;
@@ -60,29 +64,41 @@ public class GameHandler : MonoBehaviour
             
 
             if (Input.GetKeyDown(KeyCode.E)){
-                  if ((acorns > 0) && (playerHealth < 100)) {
+                  playerEat();
+            }
+            if (Input.GetKeyDown(KeyCode.Q)){
+                  playerPlant();
+            }
+      }
+
+      public void playerEat() {
+             if ((acorns > 0) && (playerHealth < 100)) {
                   acorns -= acorns;
                   playerHealth += 3;
                   updateStatsDisplay();
+                  updateHealthSlider(3);
                   } else if (acorns < 1) {
                         showFloatingText(noAcornsText);
                         } 
                   else if (playerHealth > 99) {showFloatingText(fullHealthText);}
-            }
-            if (Input.GetKeyDown(KeyCode.Q)){
-                  if (acorns > 0) {
-                  acorns -= acorns;
+
+                  
+      }
+
+      public void playerPlant() {
+            if (acorns > 2) {
+                  acorns = acorns - 3;
                   temp = temp - 1;
                   Vector2 treeSpawnLocation;
-                  treeSpawnLocation = new Vector2((playerTransform.position.x + 0.01f), playerTransform.position.y);
+                  treeSpawnLocation = new Vector2((playerTransform.position.x + 0.00f), playerTransform.position.y);
                   GameObject Tree = Instantiate(objectToSpawn, treeSpawnLocation, Quaternion.identity);
                   // TreeGrowthAnim treeScript = Tree.GetComponent<TreeGrowthAnim>();
                   updateStatsDisplay();
+                  updateTemperatureSlider(-1);
 
-                  } else {Debug.Log("There are no acorns to plant! Collect more!");}
-            }
+                  } else {showFloatingText(NotEnoughText);}
       }
-
+ 
       public void playerGetTokens(int newTokens){
             acorns += acorns;
             updateStatsDisplay();
@@ -93,6 +109,7 @@ public class GameHandler : MonoBehaviour
                   playerHealth -= damage; 
                   if (playerHealth >=0){ 
                         updateStatsDisplay();
+                        updateHealthSlider(-damage);
                         SquirrelHurtAnimation();
                   } 
                   if (damage > 0){ 
@@ -127,19 +144,25 @@ public class GameHandler : MonoBehaviour
             tokensTextTemp.text = "ACORNS: " + acorns;
 
             Text tempTextDisplay = tempText.GetComponent<Text>();
-            tempTextDisplay.text = "Temperature: " + temp + " Degrees";
+            tempTextDisplay.text = "Temperature: " + temp;
 
-            //updates slider bar
-            tempSlider mySlider = FindObjectOfType<tempSlider>();
-            if (mySlider != null) {
-                    mySlider.IncrementProgress(-0.5f); // Adjust the argument as needed
-            }
+           
   
       }
 
-      public void updateTemperature(int amount) {
-
+      public void updateTemperatureSlider(int amount) {
+             //updates slider bar
+            if (myTempSlider != null) {
+                    myTempSlider.IncrementProgress(amount); // Adjust the argument as needed
+            }
       } 
+
+      public void updateHealthSlider(int amount) {
+            //updates slider bar
+            if (myHealthSlider != null) {
+                    myHealthSlider.IncrementProgress(amount); // Adjust the argument as needed
+            }
+      }
       
       public int getAcornCount() {
             return acorns;
@@ -148,7 +171,7 @@ public class GameHandler : MonoBehaviour
       public void showFloatingText(string message) {
             Debug.Log("CalledFloating");
             // Instantiate the popup text prefab at the player's position and keep a reference to the instantiated object
-            Vector2 playerPosition = playerTransform.position * 1.1f;
+            Vector2 playerPosition = playerTransform.position * 1.0f;
             GameObject instantiatedPopUpText = Instantiate(PopUpTextPrefab, playerPosition, Quaternion.identity);
             
 
