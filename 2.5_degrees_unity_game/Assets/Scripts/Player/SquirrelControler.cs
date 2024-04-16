@@ -43,6 +43,7 @@ public class SquirrelController : MonoBehaviour
 
     void Update()
 {
+    if (isAlive) {
     // Movement Conditions
     Vector3 hMove = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0.0f);
     transform.position += hMove * runSpeed * Time.deltaTime;
@@ -92,6 +93,7 @@ public class SquirrelController : MonoBehaviour
     if (Input.GetKeyDown(KeyCode.Space))
     {
         animator.SetTrigger("Scratch");
+    }
     }
 }
 
@@ -168,5 +170,11 @@ public class SquirrelController : MonoBehaviour
             isLadder = false;
             isClimbing = false;
         }
+    }
+
+    public void SquirrelDies(){
+        Debug.Log("DIEEEE");
+        isAlive = false;
+        animator.SetTrigger("Die");
     }
 }

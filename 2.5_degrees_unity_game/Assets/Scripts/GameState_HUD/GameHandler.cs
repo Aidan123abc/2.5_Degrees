@@ -31,6 +31,7 @@ public class GameHandler : MonoBehaviour
 
     private Transform playerTransform;
     private GameObject Squirrel;
+    private SquirrelController squirrelScript;
 
 
       public bool isDefending = false; 
@@ -58,6 +59,11 @@ public class GameHandler : MonoBehaviour
             tokensTextTemp.text = "#" + acorns;
             tempTextDisplay.text = "Temperature: " + temp;
 
+            squirrelScript = Squirrel.GetComponent<SquirrelController>(); // Assign the component
+            if (squirrelScript == null)
+            {
+                Debug.LogError("SquirrelController script not found on the Squirrel GameObject.");
+            }
       }
 
         void Update () {
@@ -110,7 +116,7 @@ public class GameHandler : MonoBehaviour
                   if (playerHealth >=0){ 
                         updateStatsDisplay(); 
                         updateHealthSlider(-0.03f);
-                        SquirrelHurtAnimation();
+                        squirrelScript.TriggerHurtAnimation();
                   } 
                   if (damage > 0){ 
                         // player.GetComponent<PlayerHurt>().playerHit();       //play GetHit animation 
@@ -124,10 +130,12 @@ public class GameHandler : MonoBehaviour
 
            if (playerHealth <= 0){
                   playerHealth = 0; 
+                  Debug.Log("Die?");
+                  squirrelScript.SquirrelDies();
                   updateStatsDisplay();
-                  Application.Quit();       //Update later! change so does not quit
+                  // Application.Quit();       //Update later! change so does not quit
             }
-      } 
+      }
 
       public void playerPickUp(int amount) {
             acorns = acorns + amount;
@@ -155,7 +163,7 @@ public class GameHandler : MonoBehaviour
             if (myTempSlider != null) {
                     myTempSlider.IncrementProgress(amount); // Adjust the argument as needed
             }
-      } 
+      }
 
       public void updateHealthSlider(float amount) {
             //updates slider bar
@@ -186,29 +194,14 @@ public class GameHandler : MonoBehaviour
             // }
       }
 
-      public void SquirrelHurtAnimation() {
-        // Ensure the Squirrel GameObject is assigned in the inspector.
-        if (Squirrel != null)
-        {
+      // public void SquirrelHurtAnimation() {
+      //   // Ensure the Squirrel GameObject is assigned in the inspector.
+      //   if (Squirrel != null)
+      //   {
+      //       squirrelScript.TriggerHurtAnimation();
+      //   }
             // Get the SquirrelController script component from the Squirrel GameObject.
-            SquirrelController squirrelScript = Squirrel.GetComponent<SquirrelController>();
-
-            // Ensure the SquirrelController script was found.
-            if (squirrelScript != null)
-            {
-                // Trigger the hurt animation.
-                squirrelScript.TriggerHurtAnimation();
-            }
-            else
-            {
-                Debug.LogError("SquirrelController script not found on the Squirrel GameObject.");
-            }
-        }
-        else
-        {
-            Debug.LogError("Squirrel GameObject is not assigned in the GameHandler script.");
-        }
-    }
+      // }
 
     //   public void playerDies(){
     //         player.GetComponent<PlayerHurt>().playerDead();       //play Death animation 

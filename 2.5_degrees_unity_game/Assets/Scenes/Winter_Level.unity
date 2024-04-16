@@ -211,6 +211,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3420799860681047533, guid: 47c158d77fbac47ec9dff34b883bb57d, type: 3}
+      propertyPath: mixer
+      value: 
+      objectReference: {fileID: 24100000, guid: 5949c05efd13441c8843bb2a79924be5, type: 2}
     - target: {fileID: 7641586745389629136, guid: 47c158d77fbac47ec9dff34b883bb57d, type: 3}
       propertyPath: m_Name
       value: MenuHandler
@@ -262,30 +266,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7641586745389629136, guid: 47c158d77fbac47ec9dff34b883bb57d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 749730470}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47c158d77fbac47ec9dff34b883bb57d, type: 3}
---- !u!1 &749730469 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7641586745389629136, guid: 47c158d77fbac47ec9dff34b883bb57d, type: 3}
-  m_PrefabInstance: {fileID: 749730468}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &749730470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 749730469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2db4001371cdf4bce9ee0b4a1c2fe1b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 1989626820}
-  MapUI: {fileID: 0}
 --- !u!1 &773416743
 GameObject:
   m_ObjectHideFlags: 0
@@ -16032,11 +16014,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35650f67b2297496ea0435d6828ed62b, type: 3}
---- !u!1 &1989626820 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3666515747518652235, guid: 35650f67b2297496ea0435d6828ed62b, type: 3}
-  m_PrefabInstance: {fileID: 1675322123}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1989626821 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5761869629880526841, guid: 35650f67b2297496ea0435d6828ed62b, type: 3}

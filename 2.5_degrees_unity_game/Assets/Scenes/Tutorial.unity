@@ -21346,7 +21346,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Move left and right using 'W' & 'D' or arrows
+  m_text: Move left and right using 'A' & 'D' or arrows
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6dabb7087d3fa494d8818a90f13cd12a, type: 2}
   m_sharedMaterial: {fileID: -3082030612828857451, guid: 6dabb7087d3fa494d8818a90f13cd12a, type: 2}
