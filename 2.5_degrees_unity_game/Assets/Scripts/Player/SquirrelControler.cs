@@ -102,11 +102,13 @@ public class SquirrelController : MonoBehaviour
         if (isClimbing)
         {
             rb.gravityScale = 0f;
-            rb.velocity = new Vector2(rb.velocity.x, vertical * speed);
+            // rb.velocity = new Vector2(rb.velocity.x, vertical * speed);
+            animator.SetBool("ClimbLadder", true);
         }
         else
         {
             rb.gravityScale = 1f;
+            animator.SetBool("ClimbLadder", false);
         }
     }
 
@@ -155,7 +157,7 @@ public class SquirrelController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Ladder"))
         {
