@@ -11,6 +11,7 @@ public class PauseMenuHandler : MonoBehaviour
 {
      public static bool GameisPaused = false;
         public GameObject pauseMenuUI;
+        public GameObject MapUI;
         // public AudioMixer mixer;
         // public static float volumeLevel = 1.0f;
         //private Slider sliderVolumeCtrl;
@@ -26,6 +27,7 @@ public class PauseMenuHandler : MonoBehaviour
 
         void Start (){
                 pauseMenuUI.SetActive(false);
+                MapUI.SetActive(false);
                 GameisPaused = false;
         }
 
@@ -40,6 +42,30 @@ public class PauseMenuHandler : MonoBehaviour
                 }
         }
 
+        public void OpenMap(){
+                MapUI.SetActive(true);
+                Time.timeScale = 0f;
+                GameisPaused = true;
+        }
+
+        public void Forest(){
+                Time.timeScale = 1f;
+                GameisPaused = false;
+                SceneManager.LoadScene("Tutorial");
+        }
+
+        public void Tundra(){
+                Time.timeScale = 1f;
+                GameisPaused = false;
+                SceneManager.LoadScene("Winter_Level");
+        }
+
+        public void City(){
+                Time.timeScale = 1f;
+                GameisPaused = false;
+                SceneManager.LoadScene("City");
+        }
+
         public void Pause(){
                 pauseMenuUI.SetActive(true);
                 Time.timeScale = 0f;
@@ -48,6 +74,12 @@ public class PauseMenuHandler : MonoBehaviour
 
         public void Resume(){
                 pauseMenuUI.SetActive(false);
+                Time.timeScale = 1f;
+                GameisPaused = false;
+        }
+
+        public void CloseMap(){
+                MapUI.SetActive(false);
                 Time.timeScale = 1f;
                 GameisPaused = false;
         }
