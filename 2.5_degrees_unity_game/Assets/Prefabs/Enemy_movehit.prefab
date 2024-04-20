@@ -151,6 +151,7 @@ GameObject:
   - component: {fileID: 436973769610535373}
   - component: {fileID: 4766479523831559403}
   - component: {fileID: 6650204007469673281}
+  - component: {fileID: 4692380138188125492}
   m_Layer: 7
   m_Name: Enemy_movehit
   m_TagString: Enemy
@@ -254,7 +255,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6611834240173295102}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d68fa472fc0b5461eb0d1642a34fff86, type: 3}
   m_Name: 
@@ -329,3 +330,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.66763306, y: 1.2578206}
   m_EdgeRadius: 0
+--- !u!114 &4692380138188125492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6611834240173295102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f5d0826532d4f26ab0228a0bab8fe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  startWaitTime: 2
+  moveSpots: []
+  startSpot: 0
+  moveForward: 1
+  faceRight: 0

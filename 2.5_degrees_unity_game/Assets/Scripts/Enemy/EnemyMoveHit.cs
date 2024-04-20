@@ -17,11 +17,12 @@ public class EnemyMoveHit : MonoBehaviour {
        public float attackRange = 10;
        public bool isAttacking = false;
        private float scaleX;
+       public float knockBackForce = 20f;
 
        void Start () {
               anim = GetComponentInChildren<Animator> ();
               rb2D = GetComponent<Rigidbody2D> ();
-              scaleX = gameObject.transform.localScale.x;
+              // scaleX = gameObject.transform.localScale.x;
 
               if (GameObject.FindGameObjectWithTag ("Player") != null) {
                      target = GameObject.FindGameObjectWithTag ("Player").GetComponent<Transform> ();
@@ -29,24 +30,27 @@ public class EnemyMoveHit : MonoBehaviour {
 
               if (GameObject.FindWithTag ("GameHandler") != null) {
                   gameHandler = GameObject.FindWithTag ("GameHandler").GetComponent<GameHandler> ();
+                  Debug.Log("Component found");
+              } else {
+                  Debug.Log("Null");
               }
        }
        void FixedUpdate() {
-              float DistToPlayer = Vector3.Distance(transform.position, target.position);
+//               float DistToPlayer = Vector3.Distance(transform.position, target.position);
 
-//             
-// transform.position = MovePos;
+// //             
+// // transform.position = MovePos;
 
-              if ((target != null) && (DistToPlayer <= attackRange)){
-                     transform.position = Vector2.MoveTowards (transform.position, target.position, speed * Time.deltaTime);
-                    //anim.SetBool("Walk", true);
-                    //flip enemy to face player direction. Wrong direction? Swap the * -1.
-                    if (target.position.x > gameObject.transform.position.x){
-                                   gameObject.transform.localScale = new Vector2(scaleX, gameObject.transform.localScale.y);
-                    } else {
-                                    gameObject.transform.localScale = new Vector2(scaleX * -1, gameObject.transform.localScale.y);
-                    }
-              }
+//               if ((target != null) && (DistToPlayer <= attackRange)){
+//                      transform.position = Vector2.MoveTowards (transform.position, target.position, speed * Time.deltaTime);
+//                     //anim.SetBool("Walk", true);
+//                     //flip enemy to face player direction. Wrong direction? Swap the * -1.
+//                     if (target.position.x > gameObject.transform.position.x){
+//                                    gameObject.transform.localScale = new Vector2(scaleX, gameObject.transform.localScale.y);
+//                     } else {
+//                                     gameObject.transform.localScale = new Vector2(scaleX * -1, gameObject.transform.localScale.y);
+//                     }
+//               }
                //else { anim.SetBool("Walk", false);}
        }
 
@@ -56,6 +60,16 @@ public class EnemyMoveHit : MonoBehaviour {
                      //anim.SetBool("Attack", true);
                      gameHandler.playerGetHit(damage);
                      anim.SetTrigger("attack");
+                     //Add force to the player, pushing them back without teleporting:
+                     Debug.Log("Knockback time");
+                    float pushBack = 0f;
+                     if (other.gameObject.transform.position.x > gameObject.transform.position.x){
+                            pushBack = 3f;
+                     }
+                     else {
+                            pushBack = -3f;
+                     }
+                     other.gameObject.transform.position = new Vector3(transform.position.x + pushBack, transform.position.y + 1, 0);
               }
        }
 
