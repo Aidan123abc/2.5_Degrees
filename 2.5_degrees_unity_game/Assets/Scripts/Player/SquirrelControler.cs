@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class SquirrelController : MonoBehaviour
 {
-    //Movement Vairables
+    // Movement Variables
     private Animator animator;
     private bool FaceRight = true; 
     public float runSpeed = 10f;
-	public GameHandler gameHandler;
+    public GameHandler gameHandler;
     public Transform respawnPosition;
 
-    //Jumping Variables
+    // Jumping Variables
     private Rigidbody2D rb;
     public float jumpForce = 20f;
     public Transform feet;
@@ -19,7 +19,7 @@ public class SquirrelController : MonoBehaviour
     public int jumpTimes = 0; 
     public bool isAlive = true;
 
-    //Ladder Variables
+    // Ladder Variables
     private float vertical;
     private float speed = 4f;
     private bool isLadder;
@@ -27,11 +27,9 @@ public class SquirrelController : MonoBehaviour
 
     void Start()
     {
-        //Get squirrel art file for animations
         Transform childTransform = transform.Find("squirrel_art");
         if (childTransform != null)
         {
-            //Get animator  
             animator = childTransform.GetComponent<Animator>();
         }
         else
@@ -42,111 +40,135 @@ public class SquirrelController : MonoBehaviour
         gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
     }
 
-    void FixedUpdate()
-{
-    if (isAlive) {
-    // Movement Conditions
-    Vector3 hMove = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0.0f);
-    transform.position += hMove * runSpeed * Time.deltaTime;
-
-    // Walking animations    
-    if (hMove.x != 0){
-        animator.SetBool("Walk", true);
-    } else {
-        animator.SetBool("Walk", false);
-    }
-
-    if ((hMove.x < 0 && !FaceRight) || (hMove.x > 0 && FaceRight))
+    void Update()
     {
-        Turn();
+        if (!isAlive) return;
+
+        HandleMovement();
+        HandleAnimation();
+        CheckClimbing();
+        ProcessInputs();
     }
 
-    // Jumping Conditions using Vertical axis
-    if (IsGrounded() && Input.GetAxis("Vertical") > 0 && jumpTimes <= 1 && isAlive) 
-    { 
-        Jump();
-        canJump = true;
-        animator.SetBool("Fly", false);
-    } 
-    else
+    void HandleMovement()
     {
-        canJump = false;
-        animator.SetBool("Fly", true);
-    }
-    if(IsGrounded()){
-        animator.SetBool("Fly", false);
-    }
+        Vector3 hMove = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0.0f);
+        transform.position += hMove * runSpeed * Time.deltaTime;
 
-    // Ladder Conditions (no changes needed here)
-    vertical = Input.GetAxisRaw("Vertical");
-    if (isLadder && Mathf.Abs(vertical) > 0f)
-    {
-        isClimbing = true;
-    }
-
-    // 'E' eats acorns (no changes needed here)
-    if (Input.GetKeyDown(KeyCode.E)) {
-        if(gameHandler.getAcornCount() > 0){
-            animator.SetTrigger("Eat");   
+        if ((hMove.x > 0 && FaceRight) || (hMove.x < 0 && !FaceRight))
+        {
+            Turn();
         }
     }
-    //  Scratch animation
-    if (Input.GetKeyDown(KeyCode.Space))
+
+    void HandleAnimation()
     {
-        animator.SetTrigger("Scratch");
-    }
+        animator.SetBool("Walk", Input.GetAxis("Horizontal") != 0);
+        animator.SetBool("Fly", !IsGrounded());
     }
 
-    if (isClimbing)
+    void CheckClimbing()
+    {
+        vertical = Input.GetAxisRaw("Vertical");
+        if (isLadder)
         {
-            rb.gravityScale = 0f;
-            // rb.velocity = new Vector2(rb.velocity.x, vertical * speed);
-            animator.SetBool("ClimbLadder", true);
+            isClimbing = true;
+            rb.gravityScale = 0;
+            if(Mathf.Abs(vertical) > 0)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, vertical * speed);
+                animator.SetBool("ClimbLadder", true);
+            }
         }
         else
         {
-            rb.gravityScale = 1f;
+            isClimbing = false;
+            rb.gravityScale = 1;
             animator.SetBool("ClimbLadder", false);
         }
-}
+    }
 
-    // private void FixedUpdate()
-    // {
-        
-    // }
+    void ProcessInputs()
+    {
+        // Check for climbing before jumping
+        if (isClimbing) return;  // If climbing, do not process jumping
 
-    private void Turn()
-	{
-		// Switch player facing label
-		FaceRight = !FaceRight;
+        if (IsGrounded() && Input.GetAxis("Vertical") > 0 && jumpTimes < 2 && !isClimbing)
+        {
+            Jump();
+        }
 
-		// Multiply player's x local scale by -1.
-		Vector3 theScale = transform.localScale;
-		theScale.x *= -1;
-		transform.localScale = theScale;
-	}
+        if (Input.GetKeyDown(KeyCode.E) && gameHandler.getAcornCount() > 0)
+        {
+            animator.SetTrigger("Eat");
+        }
 
-    void Jump() {
-            jumpTimes += 1;
-            rb.velocity = Vector2.up * jumpForce;
-            // anim.SetTrigger("Jump");
-            // JumpSFX.Play();
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            animator.SetTrigger("Scratch");
+        }
+    }
 
-            //Vector2 movement = new Vector2(rb.velocity.x, jumpForce);
-            //rb.velocity = movement;
-    } 
+    void Turn()
+    {
+        FaceRight = !FaceRight;
+        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+    }
 
-    bool IsGrounded() { 
+    void Jump()
+    {
+        rb.velocity = Vector2.up * jumpForce;
+        canJump = false;
+        jumpTimes++;
+    }
+
+    bool IsGrounded()
+    { 
         Collider2D groundCheck = Physics2D.OverlapCircle(feet.position, 0.5f, groundLayer);
-        Collider2D enemyCheck = Physics2D.OverlapCircle(feet.position, 0.5f, enemyLayer);
-        if (groundCheck != null) //|| (enemyCheck != null)) 
+        if (groundCheck != null)
         { 
-                // Debug.Log("I am trouching ground!");
-                jumpTimes = 0;
-                return true;
+            jumpTimes = 0;
+            canJump = true;
+            return true;
         }
         return false;
-      }
+    }
+
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Ladder"))
+        {
+            isLadder = true;
+            canJump = false;
+        }
+        else if (collision.CompareTag("Respawn"))
+        {
+            HandleRespawn();
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Ladder"))
+        {
+            isLadder = false;
+            isClimbing = false;
+            canJump = true;
+        }
+    }
+
+    public void SquirrelDies()
+    {
+        isAlive = false;
+        animator.SetTrigger("Die");
+    }
+
+    private void HandleRespawn()
+    {
+        transform.position = respawnPosition.position;
+        isAlive = true;
+        rb.velocity = Vector2.zero;
+    }
 
     public void TriggerHurtAnimation()
     {
@@ -158,40 +180,5 @@ public class SquirrelController : MonoBehaviour
         {
             Debug.LogError("Animator component not found on child object!");
         }
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-{
-    if (collision.CompareTag("Ladder"))
-    {
-        isLadder = true;
-    }
-    if (collision.CompareTag("Respawn"))
-    {
-        HandleRespawn();
-    }
-}
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Ladder"))
-        {
-            isLadder = false;
-            isClimbing = false;
-        }
-    }
-
-    public void SquirrelDies(){
-        Debug.Log("DIEEEE");
-        isAlive = false;
-        animator.SetTrigger("Die");
-    }
-
-    private void HandleRespawn()
-    {
-        transform.position = respawnPosition.position; // Move the squirrel to the respawn position
-        isAlive = true; // Make sure the squirrel is marked as alive if it was not
-        rb.velocity = Vector2.zero; // Reset velocity
-        // animator.SetTrigger("Respawn"); // Trigger a respawn animation if you have one
     }
 }
