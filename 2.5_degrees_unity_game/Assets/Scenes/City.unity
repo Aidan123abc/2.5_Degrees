@@ -449,7 +449,7 @@ PrefabInstance:
       objectReference: {fileID: 46729385}
     - target: {fileID: 5299120429231072958, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
       propertyPath: startingLevel
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5446683294159361354, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
       propertyPath: m_Enabled
@@ -26576,6 +26576,10 @@ PrefabInstance:
       propertyPath: PopUpTextPrefab
       value: 
       objectReference: {fileID: 7870172058806046165, guid: f2deb5a658861439da2a5f21f59bd6d3, type: 3}
+    - target: {fileID: 6406961069774658663, guid: 5c6f191ee0907408cbd105a920fd8fe4, type: 3}
+      propertyPath: StartPlayerHealth
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 7831659313749794832, guid: 5c6f191ee0907408cbd105a920fd8fe4, type: 3}
       propertyPath: m_Name
       value: GameHandler

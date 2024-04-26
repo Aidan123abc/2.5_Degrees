@@ -62,7 +62,7 @@ public class GameHandler : MonoBehaviour
             }
 
             if (myHealthSlider != null) {
-                    myHealthSlider.setProgress(playerHealth); // Adjust the argument as needed
+                    myHealthSlider.setProgress(playerHealth/100f); // Adjust the argument as needed
             }
 
             Text tokensTextTemp = acornsText.GetComponent<Text>();

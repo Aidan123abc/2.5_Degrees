@@ -26,9 +26,11 @@ public class tempSlider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       Debug.Log("Target: " + targetProgress);
        if (slider.value != targetProgress) {
         slider.value += fillSpeed * Time.deltaTime;
        }
+
        
         
     }
@@ -42,6 +44,7 @@ public class tempSlider : MonoBehaviour
 
     public void setProgress(float newProgress) {
         Debug.Log("setting to: " + newProgress);
+        slider.value = newProgress;
         targetProgress = newProgress;
     }
 }
