@@ -7,15 +7,15 @@ using TMPro;
 public class GameHandler : MonoBehaviour
 {
     private GameObject player; 
-    public int playerHealth = 100;
-    public int StartPlayerHealth = 100;
-    public int startTemp = 75;
+    public static int playerHealth = 90;
+    //public int StartPlayerHealth = 100;
+    //public int startTemp = 75;
     public GameObject healthText;
 
     public static int acorns = 0; 
     public GameObject acornsText; 
     public GameObject tempText;
-    public static int temp; 
+    public static int temp = 50; 
     public float tempForSlider;
     public tempSlider myTempSlider;
     public tempSlider myHealthSlider;
@@ -50,8 +50,8 @@ public class GameHandler : MonoBehaviour
             }
             // sceneName = SceneManager.GetActiveScene().name;
             //if (sceneName=="MainMenu"){ //uncomment these two lines when the MainMenu exists
-                  playerHealth = StartPlayerHealth;
-                  temp = startTemp;
+                  //playerHealth = StartPlayerHealth;
+                  // temp = startTemp;
                   tempForSlider = temp/100f;
                   Debug.Log("Temperature at: " + temp);
                   Debug.Log("Slider at: " + tempForSlider);
@@ -94,9 +94,9 @@ public class GameHandler : MonoBehaviour
       public void playerEat() {
              if ((acorns > 0) && (playerHealth < 100)) {
                   acorns = acorns - 1;
-                  playerHealth += 3;
+                  playerHealth += 2;
                   updateStatsDisplay();
-                  updateHealthSlider(0.03f);
+                  updateHealthSlider(0.02f);
                   } else if (acorns < 1) {
                         showFloatingText(noAcornsText);
                         } 
@@ -137,10 +137,10 @@ public class GameHandler : MonoBehaviour
                   } 
             } 
 
-           if (playerHealth > StartPlayerHealth){
-                  playerHealth = StartPlayerHealth; 
-                  updateStatsDisplay();
-            }
+      //      if (playerHealth > StartPlayerHealth){
+      //             playerHealth = StartPlayerHealth; 
+      //             updateStatsDisplay();
+      //       }
 
            if (playerHealth <= 0){
                   playerHealth = 0; 
