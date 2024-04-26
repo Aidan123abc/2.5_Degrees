@@ -449,7 +449,7 @@ PrefabInstance:
       objectReference: {fileID: 46729385}
     - target: {fileID: 5299120429231072958, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
       propertyPath: startingLevel
-      value: 0.8
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5446683294159361354, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
       propertyPath: m_Enabled
@@ -1084,6 +1084,17 @@ Transform:
   m_Father: {fileID: 604020113}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &381885167 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2071166801912990325, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+  m_PrefabInstance: {fileID: 46729381}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0aa8dfb161d74a068b86b7dad0556bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &392382500
 GameObject:
   m_ObjectHideFlags: 0
@@ -13815,6 +13826,17 @@ Transform:
   m_Father: {fileID: 604020113}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &638633868 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5299120429231072958, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+  m_PrefabInstance: {fileID: 46729381}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0aa8dfb161d74a068b86b7dad0556bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &684905704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26535,9 +26557,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6406961069774658663, guid: 5c6f191ee0907408cbd105a920fd8fe4, type: 3}
+      propertyPath: myTempSlider
+      value: 
+      objectReference: {fileID: 381885167}
+    - target: {fileID: 6406961069774658663, guid: 5c6f191ee0907408cbd105a920fd8fe4, type: 3}
       propertyPath: objectToSpawn
       value: 
       objectReference: {fileID: 3483061203112521796, guid: c795e63c802c64e07a9e585b425c5e70, type: 3}
+    - target: {fileID: 6406961069774658663, guid: 5c6f191ee0907408cbd105a920fd8fe4, type: 3}
+      propertyPath: myHealthSlider
+      value: 
+      objectReference: {fileID: 638633868}
     - target: {fileID: 6406961069774658663, guid: 5c6f191ee0907408cbd105a920fd8fe4, type: 3}
       propertyPath: PopUpTextPrefab
       value: 

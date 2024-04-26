@@ -9,7 +9,7 @@ public class tempSlider : MonoBehaviour
 
     public Slider slider;
     public float fillSpeed = 0.5f;
-    private float targetProgress = 80;
+    private float targetProgress = .8f;
     public float startingLevel;
 
 
@@ -38,6 +38,10 @@ public class tempSlider : MonoBehaviour
 
         Debug.Log("PRGORESS?");
         targetProgress = slider.value += newProgress;
+    }
+
+    public void setProgress(float newProgress) {
+        targetProgress = newProgress;
     }
 }
 

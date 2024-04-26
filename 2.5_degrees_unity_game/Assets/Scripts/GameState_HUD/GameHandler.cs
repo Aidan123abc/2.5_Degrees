@@ -9,7 +9,7 @@ public class GameHandler : MonoBehaviour
     private GameObject player; 
     public int playerHealth = 100;
     public int StartPlayerHealth = 100;
-    public int startTemp = 100;
+    public int startTemp = 75;
     public GameObject healthText;
 
     public static int acorns = 0; 
@@ -53,6 +53,13 @@ public class GameHandler : MonoBehaviour
                   temp = startTemp;
             //}
             updateStatsDisplay();
+            if (myTempSlider != null) {
+                    myTempSlider.setProgress(temp); // Adjust the argument as needed
+            }
+
+            if (myHealthSlider != null) {
+                    myHealthSlider.setProgress(playerHealth); // Adjust the argument as needed
+            }
 
             Text tokensTextTemp = acornsText.GetComponent<Text>();
             Text tempTextDisplay = tempText.GetComponent<Text>();
@@ -64,7 +71,10 @@ public class GameHandler : MonoBehaviour
             {
                 Debug.LogError("SquirrelController script not found on the Squirrel GameObject.");
             }
-      }
+
+            InvokeRepeating("increaseTemperature", 10.0f, 10.0f);
+    }
+      
 
         void Update () {
             
@@ -175,6 +185,12 @@ public class GameHandler : MonoBehaviour
       
       public int getAcornCount() {
             return acorns;
+      }
+
+      public void increaseTemperature() {
+            temp += 1;
+            updateStatsDisplay();
+            updateTemperatureSlider(0.01f);
       }
       
       public void showFloatingText(string message) {
