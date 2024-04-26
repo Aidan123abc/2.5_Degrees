@@ -26545,6 +26545,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 46729384}
     - target: {fileID: 6406961069774658663, guid: 5c6f191ee0907408cbd105a920fd8fe4, type: 3}
+      propertyPath: startTemp
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406961069774658663, guid: 5c6f191ee0907408cbd105a920fd8fe4, type: 3}
       propertyPath: acornsText
       value: 
       objectReference: {fileID: 46729382}
@@ -31259,6 +31263,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4601938864506808126, guid: 48625e51d6a6744618987d40a2b8885e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5980687607309013245, guid: 48625e51d6a6744618987d40a2b8885e, type: 3}
+      propertyPath: m_FlipY
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

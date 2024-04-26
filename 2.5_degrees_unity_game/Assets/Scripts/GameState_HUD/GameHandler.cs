@@ -16,6 +16,7 @@ public class GameHandler : MonoBehaviour
     public GameObject acornsText; 
     public GameObject tempText;
     public static int temp; 
+    public float tempForSlider;
     public tempSlider myTempSlider;
     public tempSlider myHealthSlider;
 
@@ -51,10 +52,13 @@ public class GameHandler : MonoBehaviour
             //if (sceneName=="MainMenu"){ //uncomment these two lines when the MainMenu exists
                   playerHealth = StartPlayerHealth;
                   temp = startTemp;
+                  tempForSlider = temp/100f;
+                  Debug.Log("Temperature at: " + temp);
+                  Debug.Log("Slider at: " + tempForSlider);
             //}
             updateStatsDisplay();
             if (myTempSlider != null) {
-                    myTempSlider.setProgress(temp); // Adjust the argument as needed
+                    myTempSlider.setProgress(tempForSlider); // Adjust the argument as needed
             }
 
             if (myHealthSlider != null) {

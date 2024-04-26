@@ -41,6 +41,7 @@ public class tempSlider : MonoBehaviour
     }
 
     public void setProgress(float newProgress) {
+        Debug.Log("setting to: " + newProgress);
         targetProgress = newProgress;
     }
 }
