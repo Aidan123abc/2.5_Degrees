@@ -124,7 +124,7 @@ public class SquirrelController : MonoBehaviour
 
     bool IsGrounded()
     { 
-        Collider2D groundCheck = Physics2D.OverlapCircle(feet.position, 0.1f, groundLayer);
+        Collider2D groundCheck = Physics2D.OverlapCircle(feet.position, 0.15f, groundLayer);
         if (groundCheck != null)
         { 
             jumpTimes = 0;
