@@ -31098,6 +31098,10 @@ PrefabInstance:
       propertyPath: jumpForce
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3350035521024113352, guid: 150ddb3ffdb9534429e48cef7a971d69, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4328503566248611875, guid: 150ddb3ffdb9534429e48cef7a971d69, type: 3}
       propertyPath: m_CollisionDetection
       value: 1

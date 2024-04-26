@@ -53,8 +53,8 @@ public class GameHandler : MonoBehaviour
                   //playerHealth = StartPlayerHealth;
                   // temp = startTemp;
                   tempForSlider = temp/100f;
-                  Debug.Log("Temperature at: " + temp);
-                  Debug.Log("Slider at: " + tempForSlider);
+                  // Debug.Log("Temperature at: " + temp);
+                  // Debug.Log("Slider at: " + tempForSlider);
             //}
             updateStatsDisplay();
             if (myTempSlider != null) {

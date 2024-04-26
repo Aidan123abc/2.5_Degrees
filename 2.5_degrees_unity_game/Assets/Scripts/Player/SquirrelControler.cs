@@ -93,7 +93,7 @@ public class SquirrelController : MonoBehaviour
         // Check for climbing before jumping
         if (isClimbing) return;  // If climbing, do not process jumping
 
-        if (IsGrounded() && Input.GetAxis("Vertical") > 0 && jumpTimes < 2 && !isClimbing)
+        if (IsGrounded() && Input.GetAxis("Vertical") > 0 && jumpTimes < 2 && canJump && !isClimbing)
         {
             Jump();
         }
@@ -124,7 +124,7 @@ public class SquirrelController : MonoBehaviour
 
     bool IsGrounded()
     { 
-        Collider2D groundCheck = Physics2D.OverlapCircle(feet.position, 0.5f, groundLayer);
+        Collider2D groundCheck = Physics2D.OverlapCircle(feet.position, 0.1f, groundLayer);
         if (groundCheck != null)
         { 
             jumpTimes = 0;
