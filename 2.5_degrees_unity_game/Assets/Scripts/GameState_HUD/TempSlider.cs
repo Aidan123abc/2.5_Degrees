@@ -11,6 +11,8 @@ public class tempSlider : MonoBehaviour
     public float fillSpeed = 0.5f;
     private float targetProgress = .8f;
     public float startingLevel;
+    public Color badColor = new Color(0.8f,0.3f,0.3f);
+    public Image fill;
 
 
     private void Awake() {
@@ -20,17 +22,22 @@ public class tempSlider : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        IncrementProgress(startingLevel);
+        //IncrementProgress(startingLevel);
     }
 
     // Update is called once per frame
     void Update()
     {
-       Debug.Log("Target: " + targetProgress);
+       // Debug.Log("Target: " + targetProgress);
        if (slider.value != targetProgress) {
         slider.value += fillSpeed * Time.deltaTime;
        }
 
+        if (slider.value < 0.5f) {
+           if (fill != null) {
+                fill.color = badColor;
+           }
+        }
        
         
     }
