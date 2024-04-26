@@ -26554,7 +26554,7 @@ PrefabInstance:
       objectReference: {fileID: 46729384}
     - target: {fileID: 6406961069774658663, guid: 5c6f191ee0907408cbd105a920fd8fe4, type: 3}
       propertyPath: startTemp
-      value: 75
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6406961069774658663, guid: 5c6f191ee0907408cbd105a920fd8fe4, type: 3}
       propertyPath: acornsText

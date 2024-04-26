@@ -108,7 +108,7 @@ public class GameHandler : MonoBehaviour
       public void playerPlant() {
             if (acorns > 2) {
                   acorns = acorns - 3;
-                  temp = temp - 1;
+                  temp = temp - 5;
                   Vector2 treeSpawnLocation;
                   treeSpawnLocation = new Vector2((playerTransform.position.x + 0.00f), playerTransform.position.y);
                   GameObject Tree = Instantiate(objectToSpawn, treeSpawnLocation, Quaternion.identity);
