@@ -15,6 +15,7 @@ public class PauseMenuHandler : MonoBehaviour
         public AudioMixer mixer;
         public static float volumeLevel = 1.0f;
         private Slider sliderVolumeCtrl;
+        public GameObject map;
 
         void Awake (){
                 SetLevel (volumeLevel);
@@ -44,8 +45,10 @@ public class PauseMenuHandler : MonoBehaviour
 
         public void OpenMap(){
                 MapUI.SetActive(true);
+                YouAreHereMap squirrel = map.GetComponent<YouAreHereMap>();
                 Time.timeScale = 0f;
                 GameisPaused = true;
+                squirrel.getLocation();
         }
 
         public void Forest(){

@@ -21731,6 +21731,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1073540244 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 396216003507213744, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+  m_PrefabInstance: {fileID: 1101199951}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1073540245 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3935409707188695474, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+  m_PrefabInstance: {fileID: 1101199951}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1099849241 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5299120429231072958, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
@@ -21777,6 +21787,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1220937053535990610, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+      propertyPath: playerInMap
+      value: 
+      objectReference: {fileID: 1073540245}
     - target: {fileID: 2071166801912990325, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
       propertyPath: fill
       value: 
@@ -28229,6 +28243,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3420799860681047533, guid: 47c158d77fbac47ec9dff34b883bb57d, type: 3}
+      propertyPath: map
+      value: 
+      objectReference: {fileID: 1073540244}
     - target: {fileID: 3420799860681047533, guid: 47c158d77fbac47ec9dff34b883bb57d, type: 3}
       propertyPath: MapUI
       value: 

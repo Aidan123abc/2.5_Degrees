@@ -315,6 +315,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 396216003507213744, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+      propertyPath: m_TagString
+      value: Map
+      objectReference: {fileID: 0}
     - target: {fileID: 951139428374796874, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -350,6 +354,10 @@ PrefabInstance:
     - target: {fileID: 3092076397964453592, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3835486188310534379, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4022190967853843306, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
       propertyPath: m_TagString
@@ -458,6 +466,10 @@ PrefabInstance:
     - target: {fileID: 5299120429231072958, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
       propertyPath: startingLevel
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5423004590834672886, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5446683294159361354, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
       propertyPath: m_Enabled
@@ -26536,6 +26548,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &879015495 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 396216003507213744, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+  m_PrefabInstance: {fileID: 46729381}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &920184721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30989,6 +31006,7 @@ MonoBehaviour:
   pauseMenuUI: {fileID: 1339766930}
   MapUI: {fileID: 406444331}
   mixer: {fileID: 24100000, guid: 5949c05efd13441c8843bb2a79924be5, type: 2}
+  map: {fileID: 879015495}
 --- !u!114 &1500103416
 MonoBehaviour:
   m_ObjectHideFlags: 0

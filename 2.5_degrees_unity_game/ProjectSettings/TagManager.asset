@@ -9,6 +9,8 @@ TagManager:
   - GameHandler
   - Ladder
   - PlantedTree
+  - Map
+  - Canvas
   layers:
   - Default
   - TransparentFX
