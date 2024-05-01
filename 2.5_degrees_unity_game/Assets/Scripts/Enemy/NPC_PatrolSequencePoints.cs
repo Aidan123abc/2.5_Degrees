@@ -51,7 +51,7 @@ public class NPC_PatrolSequencePoints : MonoBehaviour {
               // NOTE2: If NPC faces the wrong direction as it moves, set the sprite Scale X = -1.
        }
 
-       private void NPCTurn(){
+       public void NPCTurn(){
               // NOTE: Switch player facing label (avoids constant turning)
               faceRight = !faceRight;
 

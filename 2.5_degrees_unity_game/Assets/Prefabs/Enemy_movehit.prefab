@@ -255,7 +255,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6611834240173295102}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d68fa472fc0b5461eb0d1642a34fff86, type: 3}
   m_Name: 
@@ -267,6 +267,7 @@ MonoBehaviour:
   EnemyLives: 3
   attackRange: 10
   isAttacking: 0
+  knockBackForce: 20
 --- !u!114 &4766479523831559403
 MonoBehaviour:
   m_ObjectHideFlags: 0
