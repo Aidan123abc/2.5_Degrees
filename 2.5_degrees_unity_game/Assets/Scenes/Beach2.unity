@@ -274,6 +274,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2928220057409678105, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 215772103}
+    - target: {fileID: 2928220057409678105, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: City
+      objectReference: {fileID: 0}
+    - target: {fileID: 3051892487498141616, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 215772103}
+    - target: {fileID: 3051892487498141616, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Forest
+      objectReference: {fileID: 0}
     - target: {fileID: 3092076397964453592, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -281,6 +297,14 @@ PrefabInstance:
     - target: {fileID: 3092076397964453592, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3816737149115006669, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 215772103}
+    - target: {fileID: 3816737149115006669, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Tundra
       objectReference: {fileID: 0}
     - target: {fileID: 4295105586059773960, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
       propertyPath: m_AnchorMax.x
@@ -305,6 +329,14 @@ PrefabInstance:
     - target: {fileID: 5513759804236635343, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 5543036216185074465, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 215772103}
+    - target: {fileID: 5543036216185074465, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Beach
       objectReference: {fileID: 0}
     - target: {fileID: 5631507022395791953, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

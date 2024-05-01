@@ -36,22 +36,22 @@ public class EnemyMoveHit : MonoBehaviour {
               }
        }
        void FixedUpdate() {
-//               float DistToPlayer = Vector3.Distance(transform.position, target.position);
+              float DistToPlayer = Vector3.Distance(transform.position, target.position);
 
-// //             
-// // transform.position = MovePos;
+//             
+// transform.position = MovePos;
 
-//               if ((target != null) && (DistToPlayer <= attackRange)){
-//                      transform.position = Vector2.MoveTowards (transform.position, target.position, speed * Time.deltaTime);
-//                     //anim.SetBool("Walk", true);
-//                     //flip enemy to face player direction. Wrong direction? Swap the * -1.
-//                     if (target.position.x > gameObject.transform.position.x){
-//                                    gameObject.transform.localScale = new Vector2(scaleX, gameObject.transform.localScale.y);
-//                     } else {
-//                                     gameObject.transform.localScale = new Vector2(scaleX * -1, gameObject.transform.localScale.y);
-//                     }
-//               }
-               //else { anim.SetBool("Walk", false);}
+              if ((target != null) && (DistToPlayer <= attackRange)){
+                     transform.position = Vector2.MoveTowards (transform.position, target.position, speed * Time.deltaTime);
+                    //anim.SetBool("Walk", true);
+                    //flip enemy to face player direction. Wrong direction? Swap the * -1.
+                    if (target.position.x > gameObject.transform.position.x){
+                                   gameObject.transform.localScale = new Vector2(scaleX, gameObject.transform.localScale.y);
+                    } else {
+                                    gameObject.transform.localScale = new Vector2(scaleX * -1, gameObject.transform.localScale.y);
+                    }
+              }
+               else { }
        }
 
        public void OnCollisionEnter2D(Collision2D other){
