@@ -8,6 +8,7 @@ public class SquirrelController : MonoBehaviour
     private bool FaceRight = true; 
     public float runSpeed = 10f;
     public GameHandler gameHandler;
+    public MenuHandler menuHandler;
     public Transform respawnPosition;
 
     // Jumping Variables
@@ -158,7 +159,7 @@ public class SquirrelController : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Ladder") || collision.CompareTag("PlantedTree"))
+        if (collision.CompareTag("Ladder"))
         {
             isLadder = true;
             canJump = false;
@@ -166,6 +167,11 @@ public class SquirrelController : MonoBehaviour
         else if (collision.CompareTag("Respawn"))
         {
             HandleRespawn();
+        }
+        else if (collision.CompareTag("EndLevelTag"))
+        {
+            Debug.Log("END LEVEL");
+            // menuHandler.PauseMenuHandler.OpenMap();
         }
     }
 
