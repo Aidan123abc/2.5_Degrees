@@ -286,7 +286,7 @@ MonoBehaviour:
   runSpeed: 5
   gameHandler: {fileID: 0}
   respawnPosition: {fileID: 0}
-  jumpForce: 5
+  jumpForce: 7
   feet: {fileID: 975294092925929988}
   groundLayer:
     serializedVersion: 2
