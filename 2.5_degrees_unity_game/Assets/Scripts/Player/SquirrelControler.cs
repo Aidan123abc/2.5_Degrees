@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections; 
 
 public class SquirrelController : MonoBehaviour
 {
@@ -15,9 +16,13 @@ public class SquirrelController : MonoBehaviour
     public Transform feet;
     public LayerMask groundLayer;
     public LayerMask enemyLayer; 
-    public bool canJump = false; 
+    public bool canJump = false;
     public int jumpTimes = 0; 
     public bool isAlive = true;
+    private bool jumpBlocker = false;
+    //public float jumpCooldown = 0.1f;  // Cooldown duration in seconds
+    private float jumpCooldown = 0.1f;  // Timer to track cooldown
+
 
     // Ladder Variables
     private float vertical;
@@ -93,8 +98,9 @@ public class SquirrelController : MonoBehaviour
         // Check for climbing before jumping
         if (isClimbing) return;  // If climbing, do not process jumping
 
-        if (IsGrounded() && Input.GetAxis("Vertical") > 0 && jumpTimes < 2 && canJump && !isClimbing)
+        if (IsGrounded() && (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && jumpTimes < 2 && canJump && !isClimbing)
         {
+            Debug.Log("ARE YOU JUMPING");
             Jump();
         }
 
@@ -119,7 +125,19 @@ public class SquirrelController : MonoBehaviour
     {
         rb.velocity = Vector2.up * jumpForce;
         canJump = false;
-        jumpTimes++;
+        Debug.Log("NO JUMP");
+        // jumpTimes++;
+        jumpBlocker = true; 
+        StartCoroutine(JumpCooldown());  // Start cooldown coroutine
+        if (++jumpTimes >= 2) jumpTimes = 0;
+        jumpBlocker = false; 
+    
+    }
+
+    IEnumerator JumpCooldown()
+    {
+        yield return new WaitForSeconds(jumpCooldown);  // Wait for the cooldown period
+        Debug.Log("CAN JUMP");
     }
 
     bool IsGrounded()
@@ -128,15 +146,19 @@ public class SquirrelController : MonoBehaviour
         if (groundCheck != null)
         { 
             jumpTimes = 0;
-            canJump = true;
+            // canJump = true;
+            if (!jumpBlocker) {
+                canJump = true;
+            }
             return true;
         }
+
         return false;
     }
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Ladder"))
+        if (collision.CompareTag("Ladder") || collision.CompareTag("PlantedTree"))
         {
             isLadder = true;
             canJump = false;
@@ -179,6 +201,14 @@ public class SquirrelController : MonoBehaviour
         else
         {
             Debug.LogError("Animator component not found on child object!");
+        }
+    }
+
+    public void SquirrelEat()
+    {
+        if (animator != null)
+        {
+        animator.SetTrigger("Eat");
         }
     }
 }
