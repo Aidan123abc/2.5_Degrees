@@ -136,7 +136,7 @@ public class SquirrelController : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Ladder"))
+        if (collision.CompareTag("Ladder") || collision.CompareTag("PlantedTree"))
         {
             isLadder = true;
             canJump = false;
@@ -179,6 +179,14 @@ public class SquirrelController : MonoBehaviour
         else
         {
             Debug.LogError("Animator component not found on child object!");
+        }
+    }
+
+    public void SquirrelEat()
+    {
+        if (animator != null)
+        {
+        animator.SetTrigger("Eat");
         }
     }
 }
