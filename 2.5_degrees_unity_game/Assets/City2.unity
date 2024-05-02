@@ -1952,6 +1952,10 @@ PrefabInstance:
       value: -0.295
       objectReference: {fileID: 0}
     - target: {fileID: 1955774780927710356, guid: 150ddb3ffdb9534429e48cef7a971d69, type: 3}
+      propertyPath: jumpForce
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955774780927710356, guid: 150ddb3ffdb9534429e48cef7a971d69, type: 3}
       propertyPath: respawnPosition
       value: 
       objectReference: {fileID: 674623949}
@@ -1989,11 +1993,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8373689654897366442, guid: 150ddb3ffdb9534429e48cef7a971d69, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 52.7
+      value: 20.61
       objectReference: {fileID: 0}
     - target: {fileID: 8373689654897366442, guid: 150ddb3ffdb9534429e48cef7a971d69, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.7
+      value: -3.61
       objectReference: {fileID: 0}
     - target: {fileID: 8373689654897366442, guid: 150ddb3ffdb9534429e48cef7a971d69, type: 3}
       propertyPath: m_LocalPosition.z
