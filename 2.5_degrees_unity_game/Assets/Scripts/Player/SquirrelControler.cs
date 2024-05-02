@@ -136,7 +136,7 @@ public class SquirrelController : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Ladder"))
+        if (collision.CompareTag("Ladder") || collision.CompareTag("PlantedTree"))
         {
             isLadder = true;
             canJump = false;
