@@ -85,6 +85,7 @@ public class GameHandler : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.E)){
                   playerEat();
+                  squirrelScript.SquirrelEat();
             }
             if (Input.GetKeyDown(KeyCode.Q)){
                   playerPlant();

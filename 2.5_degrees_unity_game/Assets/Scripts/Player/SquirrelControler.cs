@@ -181,4 +181,12 @@ public class SquirrelController : MonoBehaviour
             Debug.LogError("Animator component not found on child object!");
         }
     }
+
+    public void SquirrelEat()
+    {
+        if (animator != null)
+        {
+        animator.SetTrigger("Eat");
+        }
+    }
 }
