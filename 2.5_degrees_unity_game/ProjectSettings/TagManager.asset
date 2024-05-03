@@ -12,6 +12,7 @@ TagManager:
   - Map
   - Canvas
   - EndLevelTag
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

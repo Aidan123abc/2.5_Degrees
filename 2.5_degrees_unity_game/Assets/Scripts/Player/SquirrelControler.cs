@@ -173,6 +173,17 @@ public class SquirrelController : MonoBehaviour
             Debug.Log("END LEVEL");
             // menuHandler.PauseMenuHandler.OpenMap();
         }
+        else if (collision.CompareTag("Checkpoint"))
+        {
+            Debug.Log("CheckpointReached");
+            CheckpointScript checkpoint = collision.GetComponent<CheckpointScript>();
+            if (!checkpoint) {
+                Debug.Log("Error no checkpoint script");
+            } else {
+                checkpoint.ActivateCheckpoint();
+                respawnPosition.position = new Vector2(collision.transform.position.x + 1f, collision.transform.position.y);
+            }
+        }
     }
 
     void OnTriggerExit2D(Collider2D collision)
