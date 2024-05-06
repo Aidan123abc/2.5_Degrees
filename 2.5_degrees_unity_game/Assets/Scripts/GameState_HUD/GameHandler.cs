@@ -159,7 +159,7 @@ public class GameHandler : MonoBehaviour
             acorns = acorns + amount;
 
             Text tokensTextTemp = acornsText.GetComponent<Text>();
-            tokensTextTemp.text = "ACORNS: " + acorns;
+            tokensTextTemp.text = "#" + acorns;
       }
 
       public void updateStatsDisplay(){
