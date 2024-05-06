@@ -11,7 +11,7 @@ public class GameHandler : MonoBehaviour
     //public int StartPlayerHealth = 100;
     //public int startTemp = 75;
     public GameObject healthText;
-    public bool tempIncrease = true;
+    public bool tempIncrease;
 
     public static int acorns = 0; 
     public GameObject acornsText; 

@@ -13,6 +13,7 @@ TagManager:
   - Canvas
   - EndLevelTag
   - Checkpoint
+  - TreeHouse
   layers:
   - Default
   - TransparentFX
