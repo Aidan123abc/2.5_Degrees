@@ -12,19 +12,23 @@ public class OpeningComicNavigation : MonoBehaviour
     private int currentPanel = 0;
     private Vector3 newPos;
     private float camSpeed = 4f;
-    private float panelChangeDelay = 3f; // Adjust as needed for the delay between panel changes
+    private float panelChangeDelay = 5f; // Delay between panel changes
     private float timer = 0f;
 
     void Start()
     {
         panelsLength = panels.Length;
+        // Initialize camera position and newPos to the first panel's position
         Vector3 initialPos = panels[0].transform.position;
         transform.position = new Vector3(initialPos.x, initialPos.y, transform.position.z);
+        newPos = initialPos;
+        Debug.Log("Starting at Panel 0: Position - " + newPos);
     }
 
     void Update()
     {
         timer += Time.deltaTime;
+
         if (timer >= panelChangeDelay)
         {
             timer = 0f;
@@ -34,19 +38,22 @@ public class OpeningComicNavigation : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector2 pos = Vector2.Lerp((Vector2)transform.position, (Vector2)newPos, camSpeed * Time.fixedDeltaTime);
+        Vector3 pos = Vector3.Lerp(transform.position, newPos, camSpeed * Time.fixedDeltaTime);
         transform.position = new Vector3(pos.x, pos.y, transform.position.z);
+        Debug.Log("Camera moving to: " + newPos);
     }
 
     void NextPanel()
     {
-        if (currentPanel < (panelsLength - 1))
+        if (currentPanel < panelsLength - 1)
         {
             currentPanel++;
             newPos = panels[currentPanel].transform.position;
+            Debug.Log("Moving to Panel " + currentPanel + ": Position - " + newPos);
         }
         else
         {
+            Debug.Log("Loading next scene.");
             SceneManager.LoadScene(nextScene);
         }
     }
