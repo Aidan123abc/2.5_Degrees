@@ -123,7 +123,7 @@ public class GameHandler : MonoBehaviour
                   GameObject Tree = Instantiate(objectToSpawn, treeSpawnLocation, Quaternion.identity);
                   // TreeGrowthAnim treeScript = Tree.GetComponent<TreeGrowthAnim>();
                   updateStatsDisplay();
-                  updateTemperatureSlider(-0.01f);
+                  updateTemperatureSlider(-0.05f);
 
                   } else {showFloatingText(NotEnoughText);}
       }
