@@ -4,26 +4,29 @@ using System.Collections;
 
 public class ZoomInText : MonoBehaviour
 {
-    private TextMeshProUGUI textMesh; // Now private, will be set in Start()
+    private TextMeshPro textMesh; // Using TextMeshPro for non-UI text elements
     public float zoomDuration = 1.0f; // Duration of the zoom effect
-    public Vector3 targetScale = new Vector3(2, 2, 2); // Target scale to zoom in
+    public Vector3 targetScale = new Vector3(1, 1, 1); // Target scale to zoom in
 
     void Start()
     {
-        // Attempt to get the TextMeshProUGUI component attached to the same GameObject
-        textMesh = GetComponent<TextMeshProUGUI>();
+        // Attempt to get the TextMeshPro component attached to the same GameObject
+        textMesh = GetComponent<TextMeshPro>();
         if (textMesh == null)
         {
-            Debug.LogError("TextMeshProUGUI component not found on the GameObject.");
-            return; // Exit if no TextMeshProUGUI component found
+            Debug.LogError("TextMeshPro component not found on the GameObject.");
+            return; // Exit if no TextMeshPro component found
         }
 
-        // Start the zoom effect
+        // Start the zoom effect after a delay
         StartCoroutine(ZoomInEffect());
     }
 
     IEnumerator ZoomInEffect()
     {
+        // Wait for 10 seconds before starting the tween
+        yield return new WaitForSeconds(30);
+
         float currentTime = 0;
         Vector3 originalScale = textMesh.transform.localScale;
 
