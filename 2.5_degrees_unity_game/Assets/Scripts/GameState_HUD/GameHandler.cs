@@ -11,6 +11,7 @@ public class GameHandler : MonoBehaviour
     //public int StartPlayerHealth = 100;
     //public int startTemp = 75;
     public GameObject healthText;
+    public bool tempIncrease = true;
 
     public static int acorns = 0; 
     public GameObject acornsText; 
@@ -76,7 +77,9 @@ public class GameHandler : MonoBehaviour
                 Debug.LogError("SquirrelController script not found on the Squirrel GameObject.");
             }
 
-            InvokeRepeating("increaseTemperature", 10.0f, 10.0f);
+            if (tempIncrease = true) {
+                  InvokeRepeating("increaseTemperature", 10.0f, 10.0f);
+            }
     }
       
 
