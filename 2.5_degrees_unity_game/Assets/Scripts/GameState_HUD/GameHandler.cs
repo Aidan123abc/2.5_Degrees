@@ -162,7 +162,7 @@ public class GameHandler : MonoBehaviour
       //             updateStatsDisplay();
       //       }
 
-           if (playerHealth <= 0){
+           if (playerHealth < 1){
                   playerHealth = 0; 
                   Debug.Log("Die?");
                   squirrelScript.SquirrelDies();
