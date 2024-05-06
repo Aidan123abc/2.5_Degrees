@@ -77,7 +77,7 @@ public class GameHandler : MonoBehaviour
                 Debug.LogError("SquirrelController script not found on the Squirrel GameObject.");
             }
 
-            if (tempIncrease = true) {
+            if (tempIncrease == true) {
                   InvokeRepeating("increaseTemperature", 10.0f, 10.0f);
             }
     }
@@ -93,6 +93,11 @@ public class GameHandler : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Q)){
                   playerPlant();
             }
+
+            if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow)) {
+        // Do not perform any action related to the temperature slider here
+        // This block ensures that the left and right arrow keys do not affect the slider
+    }
       }
 
       public void playerEat() {
@@ -118,7 +123,7 @@ public class GameHandler : MonoBehaviour
                   GameObject Tree = Instantiate(objectToSpawn, treeSpawnLocation, Quaternion.identity);
                   // TreeGrowthAnim treeScript = Tree.GetComponent<TreeGrowthAnim>();
                   updateStatsDisplay();
-                  updateTemperatureSlider(-0.01f);
+                  updateTemperatureSlider(-0.05f);
 
                   } else {showFloatingText(NotEnoughText);}
       }
@@ -167,7 +172,7 @@ public class GameHandler : MonoBehaviour
             healthTextTemp.text = "HEALTH: " + playerHealth; 
 
             Text tokensTextTemp = acornsText.GetComponent<Text>();
-            tokensTextTemp.text = "Acorns: " + acorns;
+            tokensTextTemp.text = "#" + acorns;
 
             Text tempTextDisplay = tempText.GetComponent<Text>();
             tempTextDisplay.text = "Temperature: " + temp;
