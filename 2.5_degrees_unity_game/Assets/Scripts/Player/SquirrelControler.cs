@@ -101,7 +101,6 @@ public class SquirrelController : MonoBehaviour
 
         if (IsGrounded() && (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && jumpTimes < 2 && canJump && !isClimbing)
         {
-            Debug.Log("ARE YOU JUMPING");
             Jump();
         }
 
@@ -126,7 +125,6 @@ public class SquirrelController : MonoBehaviour
     {
         rb.velocity = Vector2.up * jumpForce;
         canJump = false;
-        Debug.Log("NO JUMP");
         // jumpTimes++;
         jumpBlocker = true; 
         StartCoroutine(JumpCooldown());  // Start cooldown coroutine
@@ -138,7 +136,6 @@ public class SquirrelController : MonoBehaviour
     IEnumerator JumpCooldown()
     {
         yield return new WaitForSeconds(jumpCooldown);  // Wait for the cooldown period
-        Debug.Log("CAN JUMP");
     }
 
     bool IsGrounded()
@@ -170,15 +167,13 @@ public class SquirrelController : MonoBehaviour
         }
         else if (collision.CompareTag("EndLevelTag"))
         {
-            Debug.Log("END LEVEL");
             // menuHandler.PauseMenuHandler.OpenMap();
         }
         else if (collision.CompareTag("Checkpoint"))
         {
-            Debug.Log("CheckpointReached");
             CheckpointScript checkpoint = collision.GetComponent<CheckpointScript>();
             if (!checkpoint) {
-                Debug.Log("Error no checkpoint script");
+                Debug.LogError("Error no checkpoint script");
             } else {
                 checkpoint.ActivateCheckpoint();
                 respawnPosition.position = new Vector2(collision.transform.position.x + 1f, collision.transform.position.y);
