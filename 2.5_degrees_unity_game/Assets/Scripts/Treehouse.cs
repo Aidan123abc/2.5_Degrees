@@ -24,7 +24,7 @@ public class Treehouse : MonoBehaviour
 
         if (sceneName == "Tutorial") {
             StartCoroutine(HideTextAfterTime(5));
-            Debug.Log("Open Backstory Scene");
+            SceneManager.LoadScene("LevelComic");
         } else {
             StartCoroutine(HideTextAfterTime(5));
             menuHandler.OpenMap();
