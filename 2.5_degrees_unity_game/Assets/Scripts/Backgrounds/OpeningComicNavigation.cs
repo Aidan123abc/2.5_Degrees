@@ -12,7 +12,7 @@ public class OpeningComicNavigation : MonoBehaviour
     private int currentPanel = 0;
     private Vector3 newPos;
     private float camSpeed = 4f;
-    private float panelChangeDelay = 5f; // Delay between panel changes
+    private float panelChangeDelay = 5f; // Default delay between panel changes
     private float timer = 0f;
 
     void Start()
@@ -50,6 +50,16 @@ public class OpeningComicNavigation : MonoBehaviour
             currentPanel++;
             newPos = panels[currentPanel].transform.position;
             Debug.Log("Moving to Panel " + currentPanel + ": Position - " + newPos);
+            
+            // Change panelChangeDelay based on panel number
+            if (currentPanel == 6) // Assuming the 7th panel is index 6 (0-based index)
+            {
+                panelChangeDelay = 10f; // Set delay for 7th panel
+            }
+            else
+            {
+                panelChangeDelay = 5f; // Reset delay for other panels
+            }
         }
         else
         {
