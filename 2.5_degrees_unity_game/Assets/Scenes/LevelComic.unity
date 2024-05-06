@@ -1025,6 +1025,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MenuHandler
       objectReference: {fileID: 0}
+    - target: {fileID: 7641586745389629136, guid: 47c158d77fbac47ec9dff34b883bb57d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7720852184996662149, guid: 47c158d77fbac47ec9dff34b883bb57d, type: 3}
       propertyPath: m_RootOrder
       value: 3
