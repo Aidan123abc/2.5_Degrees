@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1666765841109480620
 MonoBehaviour:
@@ -57,5 +57,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2db4001371cdf4bce9ee0b4a1c2fe1b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 3666515747518652235, guid: 35650f67b2297496ea0435d6828ed62b, type: 3}
-  MapUI: {fileID: 5444734906393065507, guid: d6c180ee2c9bd40a19373a64c48a5c81, type: 3}
+  pauseMenuUI: {fileID: 0}
+  MapUI: {fileID: 0}
+  mixer: {fileID: 24100000, guid: 5949c05efd13441c8843bb2a79924be5, type: 2}
+  map: {fileID: 0}
+  City2Button: {fileID: 0}
+  Beach2Button: {fileID: 0}
+  TundraButton: {fileID: 0}
