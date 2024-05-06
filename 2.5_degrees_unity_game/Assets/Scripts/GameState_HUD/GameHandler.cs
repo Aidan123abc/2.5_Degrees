@@ -93,6 +93,11 @@ public class GameHandler : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Q)){
                   playerPlant();
             }
+
+            if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow)) {
+        // Do not perform any action related to the temperature slider here
+        // This block ensures that the left and right arrow keys do not affect the slider
+    }
       }
 
       public void playerEat() {
