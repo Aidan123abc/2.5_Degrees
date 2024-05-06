@@ -7,6 +7,7 @@ public class PickUp : MonoBehaviour{
       public GameHandler gameHandler;
       //public playerVFX playerPowerupVFX; 
       public bool isHealthPickUp = true;
+      public AudioSource sound;
 
       public int healthBoost = 5;
     
@@ -19,7 +20,8 @@ public class PickUp : MonoBehaviour{
       public void OnTriggerEnter2D (Collider2D other){ 
             if (other.gameObject.tag == "Player"){ 
                   GetComponent<Collider2D>().enabled = false; 
-                  GetComponent< AudioSource>().Play(); 
+                  // sound = GetComponent< AudioSource>();
+                  sound.Play();
                   StartCoroutine(DestroyThis());
 
                   if (isHealthPickUp == true) {

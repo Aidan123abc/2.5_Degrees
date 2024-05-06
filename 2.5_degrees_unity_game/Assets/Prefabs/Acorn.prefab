@@ -34,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2488416211226827937
 SpriteRenderer:
@@ -97,11 +97,11 @@ AudioSource:
   m_GameObject: {fileID: 5419662641461451365}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 07a2b56d60a574664be3ad67156d5240, type: 3}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 5949c05efd13441c8843bb2a79924be5, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 3dd1112cee16e427fa756419f444a1db, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.98
-  m_Pitch: 0.15
+  m_Volume: 1
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -198,6 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameHandler: {fileID: 0}
   isHealthPickUp: 1
+  sound: {fileID: 4163649365122406468}
   healthBoost: 2
 --- !u!61 &5099919951266574578
 BoxCollider2D:

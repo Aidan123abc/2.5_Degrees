@@ -285,6 +285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeed: 5
   gameHandler: {fileID: 0}
+  menuHandler: {fileID: 0}
   respawnPosition: {fileID: 0}
   jumpForce: 7
   feet: {fileID: 975294092925929988}
