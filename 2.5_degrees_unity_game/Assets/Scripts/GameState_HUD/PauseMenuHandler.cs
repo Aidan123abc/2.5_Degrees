@@ -16,6 +16,11 @@ public class PauseMenuHandler : MonoBehaviour
         public static float volumeLevel = 1.0f;
         private Slider sliderVolumeCtrl;
         public GameObject map;
+        public Button City2Button;
+       // public Button Beach1Button;
+        public Button Beach2Button;
+        public Button TundraButton;
+        //public Button NorthPoleButton;
 
         void Awake (){
                 SetLevel (volumeLevel);
@@ -30,6 +35,16 @@ public class PauseMenuHandler : MonoBehaviour
                 pauseMenuUI.SetActive(false);
                 MapUI.SetActive(false);
                 GameisPaused = false;
+                if (GameHandler.temp > 35) {
+                        TundraButton.interactable = false;
+                } if (GameHandler.temp > 30) {
+                        Beach2Button.interactable = false;
+                } if (GameHandler.temp > 40) {
+                        City2Button.interactable = false;
+                }
+
+                //Beach1Button.interactable = false;
+                //NorthPoleButton.interactable = false;
         }
 
         void Update (){
@@ -61,6 +76,7 @@ public class PauseMenuHandler : MonoBehaviour
                 Time.timeScale = 1f;
                 GameisPaused = false;
                 SceneManager.LoadScene("Winter_Level");
+                
         }
 
         public void City(){
@@ -70,9 +86,9 @@ public class PauseMenuHandler : MonoBehaviour
         }
 
         public void City2(){
-                Time.timeScale = 1f;
-                GameisPaused = false;
-                SceneManager.LoadScene("City2");
+                    Time.timeScale = 1f;
+                    GameisPaused = false;
+                    SceneManager.LoadScene("City2");
         }
 
         public void Beach(){
