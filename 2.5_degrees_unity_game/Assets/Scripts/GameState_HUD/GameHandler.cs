@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 
 public class GameHandler : MonoBehaviour
 {
@@ -98,6 +100,15 @@ public class GameHandler : MonoBehaviour
         // Do not perform any action related to the temperature slider here
         // This block ensures that the left and right arrow keys do not affect the slider
     }
+
+            if ((temp > 99) || (playerHealth < 1)){
+                   Invoke("endScene", 3f);
+                  
+            }
+      }
+
+      public void endScene() {
+            SceneManager.LoadScene("Lose_Page");
       }
 
       public void playerEat() {
