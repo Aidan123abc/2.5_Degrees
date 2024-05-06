@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class DestroyText : MonoBehaviour
+public class UIPopUpText : MonoBehaviour
 {
     
     public float DestroyTime = 3f;
-    public string noAcornsText = "You have no acorns! Collect more!";
-    public GameObject PopUpTextPrefabUI;
+    public string noTemp = "Plant more trees and lower the global temperature to visit this island!";
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +16,7 @@ public class DestroyText : MonoBehaviour
         if (textMesh != null)
         {
             // Set the text of the TextMeshProUGUI component
-            textMesh.text = noAcornsText;
+            textMesh.text = noTemp;
         }
 
         Destroy(gameObject, DestroyTime);
