@@ -22554,6 +22554,9 @@ MonoBehaviour:
   MapUI: {fileID: 686137827}
   mixer: {fileID: 24100000, guid: 5949c05efd13441c8843bb2a79924be5, type: 2}
   map: {fileID: 686137827}
+  City2Button: {fileID: 0}
+  Beach2Button: {fileID: 0}
+  TundraButton: {fileID: 0}
 --- !u!114 &1179837683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34748,7 +34751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8728425339850041721, guid: e6908d496eb372040844ae4f1f9e6d49, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.232953
+      value: 8.31
       objectReference: {fileID: 0}
     - target: {fileID: 8728425339850041721, guid: e6908d496eb372040844ae4f1f9e6d49, type: 3}
       propertyPath: m_LocalPosition.z

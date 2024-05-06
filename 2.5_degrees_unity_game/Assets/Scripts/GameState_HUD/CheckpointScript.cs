@@ -4,26 +4,36 @@ using UnityEngine;
 
 public class CheckpointScript : MonoBehaviour
 {
-    private SpriteRenderer spriteRenderer;
+    public GameObject flagDown;
+    public GameObject flagUp;
     private bool activated = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        // Get the SpriteRenderer component attached to this GameObject
-        spriteRenderer = GetComponent<SpriteRenderer>();
-
-        // Set the initial color to white
-        spriteRenderer.color = Color.white;
+        // Initially, show Flag_down and hide Flag_up
+        flagDown.SetActive(true);
+        flagUp.SetActive(false);
     }
 
-    // Public function to activate the checkpoint and change its color to green
+    // Public function to activate the checkpoint and change the flag visibility
     public void ActivateCheckpoint()
     {
         if (!activated)
         {
-            spriteRenderer.color = Color.green;
+            flagDown.SetActive(false);
+            flagUp.SetActive(true);
             activated = true;
+        }
+    }
+
+    // Detect collisions with other GameObjects
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        // Check if the collider is tagged as "Player" (or another relevant tag)
+        if (other.CompareTag("Player"))
+        {
+            ActivateCheckpoint();
         }
     }
 }
