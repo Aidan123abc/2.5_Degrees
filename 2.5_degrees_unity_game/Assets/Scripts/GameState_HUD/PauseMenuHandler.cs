@@ -69,6 +69,12 @@ public class PauseMenuHandler : MonoBehaviour
                 SceneManager.LoadScene("City");
         }
 
+        public void City2(){
+                Time.timeScale = 1f;
+                GameisPaused = false;
+                SceneManager.LoadScene("City2");
+        }
+
         public void Beach(){
                 Time.timeScale = 1f;
                 GameisPaused = false;
