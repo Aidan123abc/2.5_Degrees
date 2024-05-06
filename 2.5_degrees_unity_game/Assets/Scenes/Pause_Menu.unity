@@ -133,27 +133,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 731494927610968831, guid: 35650f67b2297496ea0435d6828ed62b, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 731494927610968831, guid: 35650f67b2297496ea0435d6828ed62b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3666515747518652235, guid: 35650f67b2297496ea0435d6828ed62b, type: 3}
       propertyPath: m_Name
       value: PauseMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 3666515747518652235, guid: 35650f67b2297496ea0435d6828ed62b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4363615586513987773, guid: 35650f67b2297496ea0435d6828ed62b, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4363615586513987773, guid: 35650f67b2297496ea0435d6828ed62b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4363615586513987773, guid: 35650f67b2297496ea0435d6828ed62b, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5761869629880526841, guid: 35650f67b2297496ea0435d6828ed62b, type: 3}
       propertyPath: m_Pivot.x
