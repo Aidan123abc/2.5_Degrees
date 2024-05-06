@@ -40,7 +40,7 @@ public class tempSlider : MonoBehaviour
         slider.value += fillSpeed * Time.deltaTime;
        }
 
-        if ((slider.value < 0.3f) && (sliderName == "Helath Slider")) {
+        if ((slider.value < 0.2f) && (sliderName == "Helath Slider")) {
            if (fill != null) {
                 fill.color = badColor;
            }
@@ -48,7 +48,7 @@ public class tempSlider : MonoBehaviour
             fill.color = normalColor;
         }
 
-         if ((slider.value > 0.51f) && (sliderName == "Temperature Slider")) {
+         if ((slider.value > 0.80f) && (sliderName == "Temperature Slider")) {
            if (fill != null) {
                 fill.color = badColor;
            }
