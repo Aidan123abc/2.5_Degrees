@@ -1270,6 +1270,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1039128839}
     - target: {fileID: 3420799860681047533, guid: 47c158d77fbac47ec9dff34b883bb57d, type: 3}
+      propertyPath: Beach1Button
+      value: 
+      objectReference: {fileID: 966664640}
+    - target: {fileID: 3420799860681047533, guid: 47c158d77fbac47ec9dff34b883bb57d, type: 3}
       propertyPath: Beach2Button
       value: 
       objectReference: {fileID: 1329063499}
@@ -1277,6 +1281,10 @@ PrefabInstance:
       propertyPath: TundraButton
       value: 
       objectReference: {fileID: 884542775}
+    - target: {fileID: 3420799860681047533, guid: 47c158d77fbac47ec9dff34b883bb57d, type: 3}
+      propertyPath: NorthPoleButton
+      value: 
+      objectReference: {fileID: 966664639}
     - target: {fileID: 3420799860681047533, guid: 47c158d77fbac47ec9dff34b883bb57d, type: 3}
       propertyPath: PopUpTextPrefabUI
       value: 
@@ -31506,6 +31514,28 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+--- !u!114 &966664639 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6294175789272224909, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+  m_PrefabInstance: {fileID: 966664638}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &966664640 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5543036216185074465, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+  m_PrefabInstance: {fileID: 966664638}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1039128839 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 243081824029011388, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
@@ -72993,6 +73023,82 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96e46acc89a874c75bac1a2564c8d2ad, type: 3}
+--- !u!1001 &1531507184
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2561720621385227484, guid: aa1449232980849a4ba782190ac922ef, type: 3}
+      propertyPath: m_Name
+      value: SoundEffects
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792505027943809342, guid: aa1449232980849a4ba782190ac922ef, type: 3}
+      propertyPath: m_RootOrder
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792505027943809342, guid: aa1449232980849a4ba782190ac922ef, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 757.4821
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792505027943809342, guid: aa1449232980849a4ba782190ac922ef, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 384.26028
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792505027943809342, guid: aa1449232980849a4ba782190ac922ef, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.026118
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792505027943809342, guid: aa1449232980849a4ba782190ac922ef, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792505027943809342, guid: aa1449232980849a4ba782190ac922ef, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792505027943809342, guid: aa1449232980849a4ba782190ac922ef, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792505027943809342, guid: aa1449232980849a4ba782190ac922ef, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792505027943809342, guid: aa1449232980849a4ba782190ac922ef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792505027943809342, guid: aa1449232980849a4ba782190ac922ef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792505027943809342, guid: aa1449232980849a4ba782190ac922ef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aa1449232980849a4ba782190ac922ef, type: 3}
+--- !u!82 &1531507185 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7827803251578615575, guid: aa1449232980849a4ba782190ac922ef, type: 3}
+  m_PrefabInstance: {fileID: 1531507184}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1531507186 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8567620992116470166, guid: aa1449232980849a4ba782190ac922ef, type: 3}
+  m_PrefabInstance: {fileID: 1531507184}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1531507187 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 43581684305213275, guid: aa1449232980849a4ba782190ac922ef, type: 3}
+  m_PrefabInstance: {fileID: 1531507184}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1535677104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73989,6 +74095,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6406961069774658663, guid: 5c6f191ee0907408cbd105a920fd8fe4, type: 3}
+      propertyPath: eat
+      value: 
+      objectReference: {fileID: 1531507186}
+    - target: {fileID: 6406961069774658663, guid: 5c6f191ee0907408cbd105a920fd8fe4, type: 3}
+      propertyPath: hit
+      value: 
+      objectReference: {fileID: 1531507187}
+    - target: {fileID: 6406961069774658663, guid: 5c6f191ee0907408cbd105a920fd8fe4, type: 3}
+      propertyPath: plant
+      value: 
+      objectReference: {fileID: 1531507185}
     - target: {fileID: 6406961069774658663, guid: 5c6f191ee0907408cbd105a920fd8fe4, type: 3}
       propertyPath: tempText
       value: 
