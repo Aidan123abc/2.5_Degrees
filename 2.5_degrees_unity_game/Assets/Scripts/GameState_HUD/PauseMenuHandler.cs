@@ -34,6 +34,19 @@ public class PauseMenuHandler : MonoBehaviour
                 pauseMenuUI.SetActive(false);
                 MapUI.SetActive(false);
                 GameisPaused = false;
+                
+        }
+
+        void Update (){
+                if (Input.GetKeyDown(KeyCode.Escape)){
+                        if (GameisPaused){
+                                Resume();
+                        }
+                        else{
+                                Pause();
+                        }
+                }
+
                 if (GameHandler.temp > 36) {
                         NorthPoleButton.interactable = false;
                 } else {
@@ -53,17 +66,6 @@ public class PauseMenuHandler : MonoBehaviour
                         City2Button.interactable = true;
                 }
 
-        }
-
-        void Update (){
-                if (Input.GetKeyDown(KeyCode.Escape)){
-                        if (GameisPaused){
-                                Resume();
-                        }
-                        else{
-                                Pause();
-                        }
-                }
         }
 
         public void OpenMap(){
