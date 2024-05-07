@@ -17,10 +17,10 @@ public class PauseMenuHandler : MonoBehaviour
         private Slider sliderVolumeCtrl;
         public GameObject map;
         public Button City2Button;
-       // public Button Beach1Button;
+        public Button Beach1Button;
         public Button Beach2Button;
         public Button TundraButton;
-        //public Button NorthPoleButton;
+        public Button NorthPoleButton;
 
         void Awake (){
                 SetLevel (volumeLevel);
@@ -35,21 +35,26 @@ public class PauseMenuHandler : MonoBehaviour
                 pauseMenuUI.SetActive(false);
                 MapUI.SetActive(false);
                 GameisPaused = false;
-                if (GameHandler.temp > 35) {
+                if (GameHandler.temp > 36) {
+                        NorthPoleButton.interactable = false;
+                } else {
+                        NorthPoleButton.interactable = true;
+                }
+                if (GameHandler.temp > 41) {
                         TundraButton.interactable = false;
                 } else {
                         TundraButton.interactable = true;
-                } if (GameHandler.temp > 45) {
+                } if (GameHandler.temp > 46) {
                         Beach2Button.interactable = false;
                 } else {
                         Beach2Button.interactable = true;
-                } if (GameHandler.temp > 55) {
+                } if (GameHandler.temp > 56) {
                         City2Button.interactable = false;
                 } else {
                         City2Button.interactable = true;
                 }
 
-                //Beach1Button.interactable = false;
+                Beach1Button.interactable = false;
                 //NorthPoleButton.interactable = false;
         }
 

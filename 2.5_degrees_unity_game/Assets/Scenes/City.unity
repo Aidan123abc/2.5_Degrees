@@ -27163,6 +27163,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6943251100300850137, guid: c5dbe1f5fbfb04897bf4844e629481eb, type: 3}
   m_PrefabInstance: {fileID: 928138926}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &955034480 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6294175789272224909, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+  m_PrefabInstance: {fileID: 46729381}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &983452458
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33214,6 +33225,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 243081824029011388, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
   m_PrefabInstance: {fileID: 46729381}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1365527933 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5543036216185074465, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+  m_PrefabInstance: {fileID: 46729381}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1373963780
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33424,8 +33446,10 @@ MonoBehaviour:
   mixer: {fileID: 24100000, guid: 5949c05efd13441c8843bb2a79924be5, type: 2}
   map: {fileID: 879015495}
   City2Button: {fileID: 463785157}
+  Beach1Button: {fileID: 1365527933}
   Beach2Button: {fileID: 721740916}
   TundraButton: {fileID: 77564303}
+  NorthPoleButton: {fileID: 955034480}
 --- !u!114 &1500103416
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -25,6 +25,9 @@ public class Treehouse : MonoBehaviour
         if (sceneName == "Tutorial") {
             StartCoroutine(HideTextAfterTime(5));
             SceneManager.LoadScene("LevelComic");
+        } else if (sceneName == "Winter_Level2") { 
+            StartCoroutine(HideTextAfterTime(5));
+            SceneManager.LoadScene("Win_Page");
         } else {
             StartCoroutine(HideTextAfterTime(5));
             menuHandler.OpenMap();
