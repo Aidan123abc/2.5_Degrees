@@ -37,10 +37,16 @@ public class PauseMenuHandler : MonoBehaviour
                 GameisPaused = false;
                 if (GameHandler.temp > 35) {
                         TundraButton.interactable = false;
-                } if (GameHandler.temp > 30) {
+                } else {
+                        TundraButton.interactable = true;
+                } if (GameHandler.temp > 45) {
                         Beach2Button.interactable = false;
-                } if (GameHandler.temp > 40) {
+                } else {
+                        Beach2Button.interactable = true;
+                } if (GameHandler.temp > 55) {
                         City2Button.interactable = false;
+                } else {
+                        City2Button.interactable = true;
                 }
 
                 //Beach1Button.interactable = false;
