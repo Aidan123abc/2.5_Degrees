@@ -84,7 +84,7 @@ public class GameHandler : MonoBehaviour
             }
 
             if (tempIncrease == true) {
-                  InvokeRepeating("increaseTemperature", 10.0f, 10.0f);
+                  InvokeRepeating("increaseTemperature", 14.0f, 14.0f);
             }
     }
       
@@ -156,7 +156,7 @@ public class GameHandler : MonoBehaviour
                   hit.Play();
                   if (playerHealth >=0){ 
                         updateStatsDisplay(); 
-                        updateHealthSlider(-0.03f);
+                        updateHealthSlider(-0.06f);
                         squirrelScript.TriggerHurtAnimation();
                   } 
                   if (damage > 0){ 

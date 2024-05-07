@@ -1135,7 +1135,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 20
+  m_SortingOrder: 30
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!224 &191716822
 RectTransform:
@@ -27894,7 +27894,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 20
+  m_SortingOrder: 30
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!224 &1166432675
 RectTransform:
@@ -34208,7 +34208,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 20
+  m_SortingOrder: 30
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!224 &1967518928
 RectTransform:
@@ -34652,9 +34652,17 @@ PrefabInstance:
       propertyPath: flagDown
       value: 
       objectReference: {fileID: 1122752679}
+    - target: {fileID: 3529834123900003331, guid: e6908d496eb372040844ae4f1f9e6d49, type: 3}
+      propertyPath: m_SortingOrder
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6700028315419033243, guid: e6908d496eb372040844ae4f1f9e6d49, type: 3}
       propertyPath: m_Name
       value: CheckPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 7605531338762872522, guid: e6908d496eb372040844ae4f1f9e6d49, type: 3}
+      propertyPath: m_SortingOrder
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8728425339850041721, guid: e6908d496eb372040844ae4f1f9e6d49, type: 3}
       propertyPath: m_RootOrder

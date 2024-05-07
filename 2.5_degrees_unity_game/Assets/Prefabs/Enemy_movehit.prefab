@@ -265,7 +265,7 @@ MonoBehaviour:
   anim: {fileID: 193016139360378133}
   rb2D: {fileID: 0}
   speed: 4
-  damage: 3
+  damage: 6
   EnemyLives: 3
   attackRange: 10
   isAttacking: 0

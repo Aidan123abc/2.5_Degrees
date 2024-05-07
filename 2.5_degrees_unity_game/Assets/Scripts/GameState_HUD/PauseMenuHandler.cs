@@ -43,7 +43,7 @@ public class PauseMenuHandler : MonoBehaviour
                         Beach2Button.interactable = false;
                 } else {
                         Beach2Button.interactable = true;
-                } if (GameHandler.temp > 50) {
+                } if (GameHandler.temp > 55) {
                         City2Button.interactable = false;
                 } else {
                         City2Button.interactable = true;
