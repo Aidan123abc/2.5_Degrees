@@ -201,7 +201,7 @@ public class SquirrelController : MonoBehaviour
     {
         transform.position = respawnPosition.position;
         isAlive = true;
-        gameHandler.playerGetHit(8);
+        gameHandler.playerGetHit(10);
         rb.velocity = Vector2.zero;
     }
 

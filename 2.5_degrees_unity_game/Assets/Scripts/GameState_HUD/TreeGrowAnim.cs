@@ -23,7 +23,7 @@ public class TreeGrowAnim : MonoBehaviour
         }
         stage = 1;
         //stage += 1;
-        coroutine = WaitForGrowth(2f);
+        coroutine = WaitForGrowth(1f);
         StartCoroutine(coroutine);
         // stage += 1;
         // coroutine = WaitForGrowth(20f);

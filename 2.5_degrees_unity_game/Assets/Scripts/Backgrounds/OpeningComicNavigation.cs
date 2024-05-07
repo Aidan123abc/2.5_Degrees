@@ -54,7 +54,7 @@ public class OpeningComicNavigation : MonoBehaviour
             // Change panelChangeDelay based on panel number
             if (currentPanel == 6) // Assuming the 7th panel is index 6 (0-based index)
             {
-                panelChangeDelay = 10f; // Set delay for 7th panel
+                panelChangeDelay = 15f; // Set delay for 7th panel
             }
             else
             {
