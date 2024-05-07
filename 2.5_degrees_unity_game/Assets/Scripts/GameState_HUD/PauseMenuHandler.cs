@@ -18,7 +18,6 @@ public class PauseMenuHandler : MonoBehaviour
         public GameObject map;
         public Button City2Button;
         public Button Beach1Button;
-        public Button Beach2Button;
         public Button TundraButton;
         public Button NorthPoleButton;
 
@@ -45,17 +44,15 @@ public class PauseMenuHandler : MonoBehaviour
                 } else {
                         TundraButton.interactable = true;
                 } if (GameHandler.temp > 46) {
-                        Beach2Button.interactable = false;
+                        Beach1Button.interactable = false;
                 } else {
-                        Beach2Button.interactable = true;
+                        Beach1Button.interactable = true;
                 } if (GameHandler.temp > 56) {
                         City2Button.interactable = false;
                 } else {
                         City2Button.interactable = true;
                 }
 
-                Beach1Button.interactable = false;
-                //NorthPoleButton.interactable = false;
         }
 
         void Update (){
@@ -71,10 +68,10 @@ public class PauseMenuHandler : MonoBehaviour
 
         public void OpenMap(){
                 MapUI.SetActive(true);
-                YouAreHereMap squirrel = map.GetComponent<YouAreHereMap>();
+                //YouAreHereMap squirrel = map.GetComponent<YouAreHereMap>();
                 Time.timeScale = 0f;
                 GameisPaused = true;
-                squirrel.getLocation();
+                //squirrel.getLocation();
         }
 
         public void Forest(){
@@ -87,6 +84,13 @@ public class PauseMenuHandler : MonoBehaviour
                 Time.timeScale = 1f;
                 GameisPaused = false;
                 SceneManager.LoadScene("Winter_Level");
+                
+        }
+
+        public void Tundra2(){
+                Time.timeScale = 1f;
+                GameisPaused = false;
+                SceneManager.LoadScene("Winter_Level2");
                 
         }
 

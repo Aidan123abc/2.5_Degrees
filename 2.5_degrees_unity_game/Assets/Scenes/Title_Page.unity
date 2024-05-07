@@ -361,6 +361,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3079664996361673423, guid: 2b50bd38a773843e7be366b7a0dfc088, type: 3}
   m_PrefabInstance: {fileID: 103162489}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &676082666 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 912612158869961846, guid: d6c180ee2c9bd40a19373a64c48a5c81, type: 3}
+  m_PrefabInstance: {fileID: 2070903741}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &842871601
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,6 +573,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1309287169 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1504486764470750702, guid: d6c180ee2c9bd40a19373a64c48a5c81, type: 3}
+  m_PrefabInstance: {fileID: 2070903741}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1358795955 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3666515747518652235, guid: 35650f67b2297496ea0435d6828ed62b, type: 3}
@@ -605,20 +627,10 @@ MonoBehaviour:
   MapUI: {fileID: 5444734906393065507, guid: d6c180ee2c9bd40a19373a64c48a5c81, type: 3}
   mixer: {fileID: 24100000, guid: eec8f6650c0484b24b7f137175eb6aaa, type: 2}
   map: {fileID: 1599457604}
-  City2Button: {fileID: 0}
-  Beach2Button: {fileID: 0}
-  TundraButton: {fileID: 0}
---- !u!114 &1528084190 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3420799860681047533, guid: 47c158d77fbac47ec9dff34b883bb57d, type: 3}
-  m_PrefabInstance: {fileID: 5470362772295641302}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1528084185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2db4001371cdf4bce9ee0b4a1c2fe1b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  City2Button: {fileID: 676082666}
+  Beach1Button: {fileID: 2055272542}
+  TundraButton: {fileID: 1309287169}
+  NorthPoleButton: {fileID: 1863692116}
 --- !u!1 &1571500091
 GameObject:
   m_ObjectHideFlags: 0
@@ -837,6 +849,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3079664996361673423, guid: 2b50bd38a773843e7be366b7a0dfc088, type: 3}
   m_PrefabInstance: {fileID: 1697986141}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1863692116 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8597269446465709998, guid: d6c180ee2c9bd40a19373a64c48a5c81, type: 3}
+  m_PrefabInstance: {fileID: 2070903741}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1958399928
 GameObject:
   m_ObjectHideFlags: 0
@@ -1103,6 +1126,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3079664996361673423, guid: 2b50bd38a773843e7be366b7a0dfc088, type: 3}
   m_PrefabInstance: {fileID: 2018048253}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2055272542 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7852613745205379074, guid: d6c180ee2c9bd40a19373a64c48a5c81, type: 3}
+  m_PrefabInstance: {fileID: 2070903741}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2070903741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1351,7 +1385,7 @@ PrefabInstance:
     - target: {fileID: 7578022576274331567, guid: 2b50bd38a773843e7be366b7a0dfc088, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1528084190}
+      objectReference: {fileID: 1528084189}
     - target: {fileID: 7578022576274331567, guid: 2b50bd38a773843e7be366b7a0dfc088, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
@@ -1397,7 +1431,7 @@ PrefabInstance:
     - target: {fileID: 683808984967927487, guid: 35650f67b2297496ea0435d6828ed62b, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1528084190}
+      objectReference: {fileID: 0}
     - target: {fileID: 683808984967927487, guid: 35650f67b2297496ea0435d6828ed62b, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -1559,6 +1593,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3420799860681047533, guid: 47c158d77fbac47ec9dff34b883bb57d, type: 3}
+      propertyPath: MapUI
+      value: 
+      objectReference: {fileID: 1599457604}
+    - target: {fileID: 3420799860681047533, guid: 47c158d77fbac47ec9dff34b883bb57d, type: 3}
+      propertyPath: City2Button
+      value: 
+      objectReference: {fileID: 676082666}
+    - target: {fileID: 3420799860681047533, guid: 47c158d77fbac47ec9dff34b883bb57d, type: 3}
+      propertyPath: pauseMenuUI
+      value: 
+      objectReference: {fileID: 1358795955}
+    - target: {fileID: 3420799860681047533, guid: 47c158d77fbac47ec9dff34b883bb57d, type: 3}
+      propertyPath: NorthPoleButton
+      value: 
+      objectReference: {fileID: 1863692116}
     - target: {fileID: 7641586745389629136, guid: 47c158d77fbac47ec9dff34b883bb57d, type: 3}
       propertyPath: m_Name
       value: MenuHandler
@@ -1607,7 +1657,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3420799860681047533, guid: 47c158d77fbac47ec9dff34b883bb57d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
