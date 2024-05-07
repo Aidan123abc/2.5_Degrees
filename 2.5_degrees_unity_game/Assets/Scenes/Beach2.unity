@@ -33737,6 +33737,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 406528332}
     - target: {fileID: 6406961069774658663, guid: 5c6f191ee0907408cbd105a920fd8fe4, type: 3}
+      propertyPath: tempIncrease
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406961069774658663, guid: 5c6f191ee0907408cbd105a920fd8fe4, type: 3}
       propertyPath: objectToSpawn
       value: 
       objectReference: {fileID: 3483061203112521796, guid: c795e63c802c64e07a9e585b425c5e70, type: 3}
