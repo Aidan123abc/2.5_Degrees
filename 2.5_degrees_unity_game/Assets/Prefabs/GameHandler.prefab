@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6406961069774658663
 MonoBehaviour:
@@ -44,3 +44,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9571b42b7c7f48bab5cf5df16657331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthText: {fileID: 0}
+  tempIncrease: 0
+  acornsText: {fileID: 0}
+  tempText: {fileID: 0}
+  tempForSlider: 0
+  myTempSlider: {fileID: 0}
+  myHealthSlider: {fileID: 0}
+  objectToSpawn: {fileID: 0}
+  origin: {x: 0, y: 0}
+  radius: 10
+  noAcornsText: You have no acorns! Collect more!
+  NotEnoughText: You need 3 acorns to plant!
+  fullHealthText: You are already at full health!
+  PopUpTextPrefab: {fileID: 0}
+  hit: {fileID: 2015108858419322710, guid: b5697a83b15754f968e1bceabdb99843, type: 3}
+  plant: {fileID: 0}
+  eat: {fileID: 0}
+  isDefending: 0

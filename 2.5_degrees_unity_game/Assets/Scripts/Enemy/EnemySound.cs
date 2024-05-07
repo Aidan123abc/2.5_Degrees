@@ -3,7 +3,7 @@ using UnityEngine;
 public class SoundTrigger : MonoBehaviour
 {
     private AudioSource audioSource;  // AudioSource component
-    public float triggerRange = 20f;   // Set the range you consider as "close enough"
+    public float triggerRange = 40f;   // Set the range you consider as "close enough"
 
     private void Start()
     {

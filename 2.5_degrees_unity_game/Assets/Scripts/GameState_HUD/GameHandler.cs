@@ -37,6 +37,10 @@ public class GameHandler : MonoBehaviour
     private GameObject Squirrel;
     private SquirrelController squirrelScript;
 
+    public AudioSource hit; 
+    public AudioSource plant;
+    public AudioSource eat;
+
 
       public bool isDefending = false; 
 
@@ -113,6 +117,7 @@ public class GameHandler : MonoBehaviour
 
       public void playerEat() {
              if ((acorns > 0) && (playerHealth < 100)) {
+                  eat.Play();
                   acorns = acorns - 1;
                   playerHealth += 2;
                   updateStatsDisplay();
@@ -127,6 +132,7 @@ public class GameHandler : MonoBehaviour
 
       public void playerPlant() {
             if (acorns > 2) {
+                  plant.Play();
                   acorns = acorns - 3;
                   temp = temp - 5;
                   Vector2 treeSpawnLocation;
@@ -147,6 +153,7 @@ public class GameHandler : MonoBehaviour
       public void playerGetHit(int damage){
            if (isDefending == false){
                   playerHealth -= damage; 
+                  hit.Play();
                   if (playerHealth >=0){ 
                         updateStatsDisplay(); 
                         updateHealthSlider(-0.03f);
