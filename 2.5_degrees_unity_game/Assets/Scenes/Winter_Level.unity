@@ -5277,7 +5277,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileSpriteIndex: 9
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -5830,14 +5830,14 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 2130209501, guid: e66b46030b68246b1af3c937f3266a9a, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 2116748098, guid: e66b46030b68246b1af3c937f3266a9a, type: 3}
   m_TileMatrixArray:
@@ -6311,6 +6311,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4421547620397626455, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1388158069}
+    - target: {fileID: 4421547620397626455, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: playerPlant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4421547620397626455, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4421547620397626455, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5269949051725312989, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -6326,6 +6342,22 @@ PrefabInstance:
     - target: {fileID: 5513759804236635343, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631507022395791953, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1388158069}
+    - target: {fileID: 5631507022395791953, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: playerEat
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631507022395791953, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631507022395791953, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5868402081767079211, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
       propertyPath: m_Pivot.x
