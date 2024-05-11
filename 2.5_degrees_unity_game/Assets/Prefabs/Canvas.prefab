@@ -365,7 +365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -798,9 +798,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0aa8dfb161d74a068b86b7dad0556bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sliderName: 
   slider: {fileID: 3658820778846670465}
   fillSpeed: 0.5
   startingLevel: 0
+  normalColor: {r: 0, g: 0, b: 0, a: 0}
   badColor: {r: 0.8, g: 0.3, b: 0.3, a: 1}
   fill: {fileID: 4114306635257386549}
 --- !u!1 &5554899533552685759
@@ -1247,9 +1249,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0aa8dfb161d74a068b86b7dad0556bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sliderName: 
   slider: {fileID: 6075104372715526389}
   fillSpeed: 0.5
   startingLevel: 0
+  normalColor: {r: 0, g: 0, b: 0, a: 0}
   badColor: {r: 0.8, g: 0.3, b: 0.3, a: 1}
   fill: {fileID: 3947353256727010032}
 --- !u!1 &7134632550727401200
@@ -1424,7 +1428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
