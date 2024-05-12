@@ -18,6 +18,7 @@ public class GameHandler : MonoBehaviour
     public static int acorns = 0; 
     public GameObject acornsText; 
     public GameObject tempText;
+    public GameObject tempTextMap;
     public static int temp = 50; 
     public float tempForSlider;
     public tempSlider myTempSlider;
@@ -74,8 +75,10 @@ public class GameHandler : MonoBehaviour
 
             Text tokensTextTemp = acornsText.GetComponent<Text>();
             Text tempTextDisplay = tempText.GetComponent<Text>();
+            Text tempMapTextDisplay = tempTextMap.GetComponent<Text>();
             tokensTextTemp.text = "#" + acorns;
             tempTextDisplay.text = "Temperature: " + temp;
+            tempMapTextDisplay.text = "Temperature: " + temp;
 
             squirrelScript = Squirrel.GetComponent<SquirrelController>(); // Assign the component
             if (squirrelScript == null)
@@ -194,6 +197,9 @@ public class GameHandler : MonoBehaviour
 
             Text tempTextDisplay = tempText.GetComponent<Text>();
             tempTextDisplay.text = "Temperature: " + temp;
+
+            Text tempMapTextDisplay = tempTextMap.GetComponent<Text>();
+            tempMapTextDisplay.text = "Temperature: " + temp;
 
            
   

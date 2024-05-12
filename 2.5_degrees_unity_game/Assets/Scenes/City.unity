@@ -391,6 +391,10 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4211380521198547866, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4295105586059773960, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -14246,17 +14250,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1414411bc7cf041eba20c8ffbd378e56, type: 3}
---- !u!114 &721740916 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1252883853135166162, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
-  m_PrefabInstance: {fileID: 46729381}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &722148963 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6943251100300850137, guid: c5dbe1f5fbfb04897bf4844e629481eb, type: 3}
@@ -27021,6 +27014,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6406961069774658663, guid: 5c6f191ee0907408cbd105a920fd8fe4, type: 3}
+      propertyPath: tempTextMap
+      value: 
+      objectReference: {fileID: 2023256988}
+    - target: {fileID: 6406961069774658663, guid: 5c6f191ee0907408cbd105a920fd8fe4, type: 3}
       propertyPath: myTempSlider
       value: 
       objectReference: {fileID: 381885167}
@@ -33447,9 +33444,9 @@ MonoBehaviour:
   map: {fileID: 879015495}
   City2Button: {fileID: 463785157}
   Beach1Button: {fileID: 1365527933}
-  Beach2Button: {fileID: 721740916}
   TundraButton: {fileID: 77564303}
   NorthPoleButton: {fileID: 955034480}
+  tutorialButton: {fileID: 1717448826}
 --- !u!114 &1500103416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33611,6 +33608,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 02472e51cbdaa9649a9b7c28bdb337ef, type: 3}
+--- !u!114 &1717448826 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3051892487498141616, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+  m_PrefabInstance: {fileID: 46729381}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1730280555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34458,6 +34466,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5dbe1f5fbfb04897bf4844e629481eb, type: 3}
+--- !u!1 &2023256988 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1667320628012867190, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+  m_PrefabInstance: {fileID: 46729381}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2058468321 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8849033402658171745, guid: 1414411bc7cf041eba20c8ffbd378e56, type: 3}

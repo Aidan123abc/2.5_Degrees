@@ -20,6 +20,7 @@ public class PauseMenuHandler : MonoBehaviour
         public Button Beach1Button;
         public Button TundraButton;
         public Button NorthPoleButton;
+        public Button tutorialButton; 
 
         void Awake (){
                 SetLevel (volumeLevel);
@@ -34,6 +35,8 @@ public class PauseMenuHandler : MonoBehaviour
                 pauseMenuUI.SetActive(false);
                 MapUI.SetActive(false);
                 GameisPaused = false;
+                tutorialButton.interactable = false;
+
                 
         }
 

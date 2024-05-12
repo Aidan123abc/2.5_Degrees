@@ -160,6 +160,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 112198042}
     - target: {fileID: 6406961069774658663, guid: 5c6f191ee0907408cbd105a920fd8fe4, type: 3}
+      propertyPath: tempTextMap
+      value: 
+      objectReference: {fileID: 1101199955}
+    - target: {fileID: 6406961069774658663, guid: 5c6f191ee0907408cbd105a920fd8fe4, type: 3}
       propertyPath: myTempSlider
       value: 
       objectReference: {fileID: 1904693457}
@@ -22414,6 +22418,10 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4211380521198547866, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4295105586059773960, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -22698,6 +22706,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1101199954 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3051892487498141616, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+  m_PrefabInstance: {fileID: 1101199951}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1101199955 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1667320628012867190, guid: 7ba4e87a216394b479c29ca3ef1465a9, type: 3}
+  m_PrefabInstance: {fileID: 1101199951}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1118701814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30151,6 +30175,10 @@ PrefabInstance:
       propertyPath: TundraButton
       value: 
       objectReference: {fileID: 1518408404}
+    - target: {fileID: 3420799860681047533, guid: 47c158d77fbac47ec9dff34b883bb57d, type: 3}
+      propertyPath: tutorialButton
+      value: 
+      objectReference: {fileID: 1101199954}
     - target: {fileID: 3420799860681047533, guid: 47c158d77fbac47ec9dff34b883bb57d, type: 3}
       propertyPath: NorthPoleButton
       value: 
