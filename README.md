@@ -3,7 +3,7 @@
 
 The project was built in the Tufts CS23 Game Design Class, with the help of 3 other developers/artist
 
-The project can be found at https://www.2point5degree.com/]
+The project can be found at https://www.2point5degree.com/
 
 ## Tech
 All of the coding and animation was created in Unity
